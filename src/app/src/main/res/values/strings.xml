@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- Label string -->
+    <string name="app_name">Procon</string>
+    <string name="name_label">Name</string>
+    <string name="phone_label">Sibling Phone</string>
+    <string name="blood_label">Blood Group</string>
+    <string name="checking_label">Overview status application</string>
+    <string name="sound_check_label">Sound alarm checking</string>
+    <string name="desc_sound_checking">Press "check" button and wait for the alarm. The sound alram for 5 seconds or until you press "Heard" button</string>
+
+</resources>

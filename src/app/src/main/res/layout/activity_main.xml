@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.android.procon_kosen.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:background="@android:color/holo_orange_light"
+        android:id="@+id/profile_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/name_label"
+            android:id="@+id/name_label" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Boonyarith Piriyothinkul"
+            android:layout_below="@+id/name_label"
+            android:textColor="@color/abc_primary_text_material_light"
+            android:id="@+id/name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/phone_label"
+            android:layout_below="@+id/name"
+            android:id="@+id/sibling_phone"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="081 234 5678"
+            android:layout_below="@+id/sibling_phone"
+            android:textColor="@color/abc_primary_text_material_light"
+            android:id="@+id/phone1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="087 987 6543"
+            android:layout_below="@+id/phone1"
+            android:textColor="@color/abc_primary_text_material_light"
+            android:id="@+id/phone2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/blood_label"
+            android:layout_below="@id/phone2"
+            android:layout_marginTop="10dp"
+            android:id="@+id/blood_label" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/abc_primary_text_material_light"
+            android:text="AB"
+            android:layout_below="@id/blood_label"
+            android:id="@+id/blood" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:id="@+id/system_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/checking_label"
+            android:layout_marginTop="10dp"
+            android:id="@+id/checking_label" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="WIFI Enable: Enable"
+            android:layout_below="@+id/checking_label"
+            android:textColor="@color/abc_primary_text_material_light"
+            android:id="@+id/checking_wifi" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Sound check: OK"
+            android:layout_below="@+id/checking_wifi"
+            android:textColor="@color/abc_primary_text_material_light"
+            android:id="@+id/checking_sound" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/sound_check_label"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/checking_sound"
+            android:id="@+id/sound_check_label" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/desc_sound_checking"
+            android:layout_below="@+id/sound_check_label"
+            android:textColor="@color/abc_primary_text_material_light"
+            android:id="@+id/desc_checking_sound" />
+
+    </RelativeLayout>
+
+</LinearLayout>
