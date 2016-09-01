@@ -8,8 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
+
+import java.util.Arrays;
 
 public class EditProfile extends AppCompatActivity {
 
@@ -20,16 +24,27 @@ public class EditProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
 
+        Spinner spinner = (Spinner) findViewById(R.id.blood_grp_spinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.blood_group_spinner, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
         EditText name = (EditText) findViewById(R.id.edit_name);
-        EditText blood = (EditText) findViewById(R.id.edit_blood);
         EditText sibling1 = (EditText) findViewById(R.id.edit_sibling_phone1);
         EditText sibling2 = (EditText) findViewById(R.id.edit_sibling_phone2);
+        Spinner blood = (Spinner) findViewById(R.id.blood_grp_spinner);
 
+        // Get value from EditText and Spinner on Edit-profile page
         SharedPreferences sharedpreferences = getSharedPreferences("contentProfle", Context.MODE_PRIVATE);
         name.setText(sharedpreferences.getString("name", null));
-        blood.setText(sharedpreferences.getString("blood", null));
         sibling1.setText(sharedpreferences.getString("sibling1", null));
         sibling2.setText(sharedpreferences.getString("sibling2", null));
+
+        // Get value from spinner's blood group and Set selection
+        String[] i = getResources().getStringArray(R.array.blood_group_spinner);
+        int index_blood = Arrays.asList(i).indexOf(sharedpreferences.getString("blood", null));
+        blood.setSelection(index_blood);
 
         saveBtn = (Button) findViewById(R.id.save_btn);
         saveBtn.setOnClickListener(new View.OnClickListener() {
@@ -40,12 +55,12 @@ public class EditProfile extends AppCompatActivity {
                 SharedPreferences.Editor editor = sharedpreferences.edit();
 
                 EditText name = (EditText) findViewById(R.id.edit_name);
-                EditText blood = (EditText) findViewById(R.id.edit_blood);
                 EditText sibling1 = (EditText) findViewById(R.id.edit_sibling_phone1);
                 EditText sibling2 = (EditText) findViewById(R.id.edit_sibling_phone2);
+                Spinner blood = (Spinner) findViewById(R.id.blood_grp_spinner);
 
                 editor.putString("name", name.getText().toString());
-                editor.putString("blood", blood.getText().toString());
+                editor.putString("blood", blood.getSelectedItem().toString());
                 editor.putString("sibling1", sibling1.getText().toString());
                 editor.putString("sibling2", sibling2.getText().toString());
                 editor.apply();

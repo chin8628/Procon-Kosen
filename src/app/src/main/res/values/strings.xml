@@ -18,10 +18,19 @@
 
     <!-- Edit profile page -->
     <string name="edit_name">Name</string>
-    <string name="edit_sibling">Sibling phone</string>
+    <string name="edit_sibling">Sibling number phone</string>
     <string name="edit_blood">Blood Group</string>
 
     <!-- Universal button -->
     <string name="save_btn">Save</string>
+
+    <!-- Blood group Spinner -->
+    <string name="blood_group_prompt">Choose a blood group</string>
+    <string-array name="blood_group_spinner">
+        <item>O</item>
+        <item>A</item>
+        <item>B</item>
+        <item>AB</item>
+    </string-array>
 
 </resources>

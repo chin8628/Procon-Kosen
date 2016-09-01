@@ -37,13 +37,12 @@
             android:text="@string/edit_blood"
             android:id="@+id/edit_blood_label" />
 
-        <EditText
+        <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:id="@+id/edit_blood"
-            android:layout_marginBottom="10dp"
-            android:inputType="textCapCharacters" />
+            android:id="@+id/blood_grp_spinner"
+            android:prompt="@string/blood_group_prompt"
+            android:layout_marginBottom="10dp" />
 
         <TextView
             android:layout_width="wrap_content"

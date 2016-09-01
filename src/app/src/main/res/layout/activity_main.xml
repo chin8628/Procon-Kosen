@@ -33,7 +33,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Boonyarith Piriyothinkul"
                 android:layout_below="@+id/name_label"
                 android:id="@+id/name" />
 
@@ -50,7 +49,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="081 234 5678"
                 android:layout_below="@+id/sibling_phone_label"
                 android:id="@+id/sibling_phone1" />
 
@@ -58,7 +56,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="087 987 6543"
                 android:layout_below="@+id/sibling_phone1"
                 android:id="@+id/sibling_phone2" />
 
@@ -75,7 +72,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="AB"
                 android:layout_below="@id/blood_label"
                 android:id="@+id/blood" />
 
