@@ -68,9 +68,7 @@ public class MainActivity extends AppCompatActivity {
         blood.setText(sharedpreferences.getString("blood", ""));
         sibling1.setText(sharedpreferences.getString("sibling1", ""));
         sibling2.setText(sharedpreferences.getString("sibling2", ""));
-
-
-
+        
         editBtn = (Button) findViewById(R.id.edit_btn);
         editBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -119,9 +117,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-               //mainWifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
-                //receiverWifi = new WifiReceiver();
-                //registerReceiver(receiverWifi, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
                 mainWifi.startScan();
                 if (detection)
                 {
