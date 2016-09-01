@@ -9,4 +9,19 @@
     <string name="sound_check_label">Sound alarm checking</string>
     <string name="desc_sound_checking">Press "check" button and wait for the alarm. The sound alram for 5 seconds or until you press "Heard" button</string>
 
+    <!-- Main page -->
+    <string name="button_edit_profile">Edit</string>
+
+    <!-- Sound -->
+    <string name="button_check">Check</string>
+    <string name="button_heard">Heard</string>
+
+    <!-- Edit profile page -->
+    <string name="edit_name">Name</string>
+    <string name="edit_sibling">Sibling phone</string>
+    <string name="edit_blood">Blood Group</string>
+
+    <!-- Universal button -->
+    <string name="save_btn">Save</string>
+
 </resources>
