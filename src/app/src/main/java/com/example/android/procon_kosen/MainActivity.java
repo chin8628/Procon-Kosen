@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     private int appStatus;
     private String detectedSSID = "None";
     private String ssidKey = "kitsuchart";
+    private String onCommands = "on";
+    private String offCommands = "off";
     WifiManager mainWifi;
     WifiReceiver receiverWifi;
     StringBuilder sb = new StringBuilder();
@@ -124,12 +126,12 @@ public class MainActivity extends AppCompatActivity {
                 if (detection)
                 {
                     Log.v("asd", commands);
-                    if (!r.isPlaying() && commands.equals("on"))
+                    if (!r.isPlaying() && commands.equals(onCommands))
                     {
                         am.setStreamVolume(AudioManager.STREAM_RING, am.getStreamMaxVolume(AudioManager.STREAM_ALARM), am.getStreamMaxVolume(AudioManager.STREAM_ALARM));
                         r.play();
                     }
-                    else if (commands.equals("off")){
+                    else if (commands.equals(offCommands)){
                         r.stop();
                     }
                 }
