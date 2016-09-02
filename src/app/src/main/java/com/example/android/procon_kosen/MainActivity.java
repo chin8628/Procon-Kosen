@@ -28,7 +28,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private Button editBtn;
-    private boolean detection;
+    private boolean detection = false;
     private String commands;
     private int appStatus;
     private String detectedSSID = "None";
@@ -88,11 +88,9 @@ public class MainActivity extends AppCompatActivity {
 
         public void onReceive(Context c, Intent intent)
         {
-
+            detection = false;
             ArrayList<String> connections=new ArrayList<String>();
             ArrayList<Float> Signal_Strenth= new ArrayList<Float>();
-
-            detection = false;
             sb = new StringBuilder();
             List<ScanResult> wifiList;
             wifiList = mainWifi.getScanResults();
@@ -117,6 +115,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
 
+                mainWifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+                receiverWifi = new WifiReceiver();
+                registerReceiver(receiverWifi, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
                 mainWifi.startScan();
                 if (detection)
                 {
@@ -138,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause()
     {
-        unregisterReceiver(receiverWifi);
+        //unregisterReceiver(receiverWifi);
         super.onPause();
     }
 
