@@ -1,6 +1,8 @@
 package com.example.android.procon_kosen;
 
 import android.Manifest;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -14,9 +16,12 @@ import android.net.Uri;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.Handler;
+import android.renderscript.RenderScript;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -34,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
     private String detectedSSID = "None";
     private String ssidKey = "kitsuchart";
     private String onCommands = "on";
-    private String offCommands = "off";
+    private String offCommands = "ff";
+    private String target;
     WifiManager mainWifi;
     WifiReceiver receiverWifi;
     StringBuilder sb = new StringBuilder();
@@ -42,7 +48,9 @@ public class MainActivity extends AppCompatActivity {
     AudioManager am;
     Uri notification;
     Ringtone r;
-
+    SharedPreferences sharedpreferences;
+    NotificationManager mNotificationManager;
+    NotificationCompat.Builder mBuilder;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         TextView sibling1 = (TextView) findViewById(R.id.sibling_phone1);
         TextView sibling2 = (TextView) findViewById(R.id.sibling_phone2);
 
-        SharedPreferences sharedpreferences = getSharedPreferences("contentProfle", Context.MODE_PRIVATE);
+        sharedpreferences = getSharedPreferences("contentProfle", Context.MODE_PRIVATE);
         name.setText(sharedpreferences.getString("name", ""));
         blood.setText(sharedpreferences.getString("blood", ""));
         sibling1.setText(sharedpreferences.getString("sibling1", ""));
@@ -78,7 +86,20 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
+        mBuilder = new NotificationCompat.Builder(this)
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setContentTitle("IamHere")
+                .setPriority(NotificationCompat.PRIORITY_MAX)
+                .setOngoing(true)
+                .setAutoCancel(false)
+                .setContentText("You have been detected.");
+        //Intent resultIntent = new Intent(this, MainActivity.class);
+        //TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
+       // stackBuilder.addParentStack(MainActivity.class);
+        //stackBuilder.addNextIntent(resultIntent);
+        //PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
+        //mBuilder.setContentIntent(resultPendingIntent);
+        mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         doInback();
 
     }
@@ -98,11 +119,15 @@ public class MainActivity extends AppCompatActivity {
             {
 
                 connections.add(wifiList.get(i).SSID);
-                if(wifiList.get(i).SSID.contains(ssidKey))
+                if(wifiList.get(i).SSID.length() >= 14 && wifiList.get(i).SSID.contains(ssidKey))
                 {
-                    detection = true;
-                    detectedSSID = wifiList.get(i).SSID.toString();
-                    commands = detectedSSID.substring(ssidKey.length());
+                    if(wifiList.get(i).SSID.substring(ssidKey.length()+2).equals("AA") ||wifiList.get(i).SSID.substring(ssidKey.length()+2).equals(sharedpreferences.getString("blood", "")))
+                    {
+                        detection = true;
+                        detectedSSID = wifiList.get(i).SSID;
+                        commands = detectedSSID.substring(ssidKey.length(), ssidKey.length()+2);
+                        target = detectedSSID.substring(ssidKey.length()+2);
+                    }
                 }
             }
 
@@ -115,20 +140,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                mainWifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
-                receiverWifi = new WifiReceiver();
-                registerReceiver(receiverWifi, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
+                //mainWifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+                //receiverWifi = new WifiReceiver();
+                //registerReceiver(receiverWifi, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
                 mainWifi.startScan();
                 if (detection)
                 {
-                    Log.v("asd", commands);
                     if (!r.isPlaying() && commands.equals(onCommands))
                     {
                         am.setStreamVolume(AudioManager.STREAM_RING, am.getStreamMaxVolume(AudioManager.STREAM_ALARM), am.getStreamMaxVolume(AudioManager.STREAM_ALARM));
                         r.play();
+                        mNotificationManager.notify(512, mBuilder.build());
                     }
                     else if (commands.equals(offCommands)){
                         r.stop();
+                        mNotificationManager.cancel(512);
                     }
                 }
                 doInback();
