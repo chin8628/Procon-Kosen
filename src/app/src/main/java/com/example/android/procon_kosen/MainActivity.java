@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences sharedpreferences;
     NotificationManager mNotificationManager;
     NotificationCompat.Builder mBuilder;
+    MediaPlayer mp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
         am = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
         r = RingtoneManager.getRingtone(getApplicationContext(), notification);
+        mp = MediaPlayer.create(MainActivity.this,R.raw.loudalarm);
+        mp.setLooping(true);
 
         mainWifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
         receiverWifi = new WifiReceiver();
@@ -155,14 +158,17 @@ public class MainActivity extends AppCompatActivity {
                 mainWifi.startScan();
                 if (detection)
                 {
-                    if (!r.isPlaying() && commands.equals(onCommands))
+                    //if (!r.isPlaying() && commands.equals(onCommands))
+                    if(!mp.isPlaying() && commands.equals(onCommands))
                     {
-                        am.setStreamVolume(AudioManager.STREAM_RING, am.getStreamMaxVolume(AudioManager.STREAM_ALARM), am.getStreamMaxVolume(AudioManager.STREAM_ALARM));
-                        r.play();
+                        am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), am.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
+                        //r.play();
+                        mp.start();
                         mNotificationManager.notify(512, mBuilder.build());
                     }
                     else if (commands.equals(offCommands)){
-                        r.stop();
+                        //r.stop();
+                        mp.stop();
                         mNotificationManager.cancel(512);
                     }
                 }
