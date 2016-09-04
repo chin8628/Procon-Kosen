@@ -25,6 +25,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/name_label"
                 android:id="@+id/name_label" />
@@ -39,11 +40,43 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/birthday_label"
+                android:layout_below="@+id/name"
+                android:id="@+id/birthday_label" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@+id/birthday_label"
+                android:id="@+id/birthday" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/blood_label"
+                android:layout_below="@+id/birthday"
+                android:id="@+id/blood_label" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/blood_label"
+                android:id="@+id/blood" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/phone_label"
-                android:layout_below="@+id/name"
-                android:id="@+id/sibling_phone_label"
-                android:layout_marginTop="10dp" />
+                android:layout_below="@+id/blood"
+                android:id="@+id/sibling_phone_label" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -59,28 +92,12 @@
                 android:layout_below="@+id/sibling_phone1"
                 android:id="@+id/sibling_phone2" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/blood_label"
-                android:layout_below="@+id/sibling_phone2"
-                android:layout_marginTop="10dp"
-                android:id="@+id/blood_label" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_below="@id/blood_label"
-                android:id="@+id/blood" />
-
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/button_edit_profile"
                 android:id="@+id/edit_btn"
-                android:layout_alignBottom="@+id/blood"
+                android:layout_alignBottom="@+id/sibling_phone2"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true" />
 
