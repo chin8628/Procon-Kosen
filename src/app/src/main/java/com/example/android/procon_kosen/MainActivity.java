@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
         mBuilder = new NotificationCompat.Builder(this)
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle("IamHere")
@@ -93,6 +94,14 @@ public class MainActivity extends AppCompatActivity {
                 .setOngoing(true)
                 .setAutoCancel(false)
                 .setContentText("You have been detected.");
+
+        NotificationCompat.InboxStyle inBoxStyle = new NotificationCompat.InboxStyle();
+        inBoxStyle.setBigContentTitle("Personal Details:");
+        inBoxStyle.addLine("Siblings Contact");
+        inBoxStyle.addLine(sharedpreferences.getString("sibling1", ""));
+        inBoxStyle.addLine(sharedpreferences.getString("sibling2", ""));
+        inBoxStyle.addLine("Blood Type " + sharedpreferences.getString("blood", ""));
+        mBuilder.setStyle(inBoxStyle);
         //Intent resultIntent = new Intent(this, MainActivity.class);
         //TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
        // stackBuilder.addParentStack(MainActivity.class);
