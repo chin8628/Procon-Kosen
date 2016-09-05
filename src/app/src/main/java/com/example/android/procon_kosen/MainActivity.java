@@ -59,12 +59,14 @@ public class MainActivity extends AppCompatActivity {
         registerReceiver(receiverWifi, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
 
         TextView name = (TextView) findViewById(R.id.name);
+        TextView birthday = (TextView) findViewById(R.id.birthday);
         TextView blood = (TextView) findViewById(R.id.blood);
         TextView sibling1 = (TextView) findViewById(R.id.sibling_phone1);
         TextView sibling2 = (TextView) findViewById(R.id.sibling_phone2);
 
         SharedPreferences sharedpreferences = getSharedPreferences("contentProfle", Context.MODE_PRIVATE);
         name.setText(sharedpreferences.getString("name", ""));
+        birthday.setText(sharedpreferences.getString("birthday", ""));
         blood.setText(sharedpreferences.getString("blood", ""));
         sibling1.setText(sharedpreferences.getString("sibling1", ""));
         sibling2.setText(sharedpreferences.getString("sibling2", ""));
