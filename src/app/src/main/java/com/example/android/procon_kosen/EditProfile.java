@@ -17,7 +17,7 @@ import java.util.Arrays;
 public class EditProfile extends AppCompatActivity {
 
     private Button mSaveBtn, mTestBtn;
-    private EditText mName, mSibling1, mSibling2;
+    private EditText mName, mSibling1, mSibling2, mBirthday;
     private Spinner nBlood;
 
     @Override
@@ -34,6 +34,8 @@ public class EditProfile extends AppCompatActivity {
         mName = (EditText) findViewById(R.id.edit_name);
         mSibling1 = (EditText) findViewById(R.id.edit_sibling_phone1);
         mSibling2 = (EditText) findViewById(R.id.edit_sibling_phone2);
+        mBirthday = (EditText) findViewById(R.id.edit_birthday);
+
         nBlood = (Spinner) findViewById(R.id.blood_grp_spinner);
 
         // Get value from EditText and Spinner on Edit-profile page
@@ -41,6 +43,7 @@ public class EditProfile extends AppCompatActivity {
         mName.setText(sharedpreferences.getString("name", null));
         mSibling1.setText(sharedpreferences.getString("sibling1", null));
         mSibling2.setText(sharedpreferences.getString("sibling2", null));
+        mBirthday.setText(sharedpreferences.getString("birthday", null));
 
         // Get value from spinner's blood group and Set selection
         String[] i = getResources().getStringArray(R.array.blood_group_spinner);
@@ -58,6 +61,7 @@ public class EditProfile extends AppCompatActivity {
                 editor.putString("blood", nBlood.getSelectedItem().toString());
                 editor.putString("sibling1", mSibling1.getText().toString());
                 editor.putString("sibling2", mSibling2.getText().toString());
+                editor.putString("birthday", mBirthday.getText().toString());
                 editor.apply();
 
                 Intent i = new Intent(EditProfile.this, MainActivity.class);
