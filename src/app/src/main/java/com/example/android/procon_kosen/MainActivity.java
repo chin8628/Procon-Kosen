@@ -2,7 +2,6 @@ package com.example.android.procon_kosen;
 
 import android.Manifest;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -16,9 +15,7 @@ import android.net.Uri;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.Handler;
-import android.renderscript.RenderScript;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
@@ -26,6 +23,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,13 +55,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Toast.makeText(this, "Main Activity", Toast.LENGTH_LONG).show();
+
         ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1001);
+        ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.RECEIVE_BOOT_COMPLETED}, 1002);
 
         am = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
         r = RingtoneManager.getRingtone(getApplicationContext(), notification);
         mp = MediaPlayer.create(MainActivity.this,R.raw.loudalarm);
         mp.setLooping(true);
+
+        Intent service = new Intent(this, WiFiScanner.class);
+        this.startService(service);
 
         mainWifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
         receiverWifi = new WifiReceiver();
@@ -94,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle("IamHere")
                 .setPriority(NotificationCompat.PRIORITY_MAX)
-                .setOngoing(true)
+                .setOngoing(false)
                 .setAutoCancel(false)
                 .setContentText("You have been detected.");
 
@@ -105,12 +109,6 @@ public class MainActivity extends AppCompatActivity {
         inBoxStyle.addLine(sharedpreferences.getString("sibling2", ""));
         inBoxStyle.addLine("Blood Type " + sharedpreferences.getString("blood", ""));
         mBuilder.setStyle(inBoxStyle);
-        //Intent resultIntent = new Intent(this, MainActivity.class);
-        //TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
-       // stackBuilder.addParentStack(MainActivity.class);
-        //stackBuilder.addNextIntent(resultIntent);
-        //PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
-        //mBuilder.setContentIntent(resultPendingIntent);
         mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         doInback();
 
@@ -152,22 +150,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                //mainWifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
-                //receiverWifi = new WifiReceiver();
-                //registerReceiver(receiverWifi, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
                 mainWifi.startScan();
                 if (detection)
                 {
-                    //if (!r.isPlaying() && commands.equals(onCommands))
                     if(!mp.isPlaying() && commands.equals(onCommands))
                     {
                         am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), am.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
-                        //r.play();
                         mp.start();
                         mNotificationManager.notify(512, mBuilder.build());
                     }
                     else if (commands.equals(offCommands)){
-                        //r.stop();
                         mp.stop();
                         mNotificationManager.cancel(512);
                     }
@@ -191,4 +183,6 @@ public class MainActivity extends AppCompatActivity {
                 WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
         super.onResume();
     }
+
+
 }
