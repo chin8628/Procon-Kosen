@@ -18,6 +18,7 @@
 
     <!-- Edit profile page -->
     <string name="edit_name">Name</string>
+    <string name="edit_birthday">Birthday</string>
     <string name="edit_sibling">Sibling number phone</string>
     <string name="edit_blood">Blood Group</string>
 
