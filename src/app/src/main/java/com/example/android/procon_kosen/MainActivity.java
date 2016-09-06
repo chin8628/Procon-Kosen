@@ -1,6 +1,7 @@
 package com.example.android.procon_kosen;
 
 import android.Manifest;
+import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -17,10 +18,12 @@ import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
     private String detectedSSID = "None";
     private String ssidKey = "kitsuchart";
     private String onCommands = "on";
-    private String offCommands = "off";
+    private String offCommands = "ff";
+    private String target;
     WifiManager mainWifi;
     WifiReceiver receiverWifi;
     StringBuilder sb = new StringBuilder();
@@ -42,17 +46,28 @@ public class MainActivity extends AppCompatActivity {
     AudioManager am;
     Uri notification;
     Ringtone r;
-
+    SharedPreferences sharedpreferences;
+    NotificationManager mNotificationManager;
+    NotificationCompat.Builder mBuilder;
+    MediaPlayer mp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Toast.makeText(this, "Main Activity", Toast.LENGTH_LONG).show();
+
         ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1001);
+        ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.RECEIVE_BOOT_COMPLETED}, 1002);
 
         am = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
         r = RingtoneManager.getRingtone(getApplicationContext(), notification);
+        mp = MediaPlayer.create(MainActivity.this,R.raw.loudalarm);
+        mp.setLooping(true);
+
+        Intent service = new Intent(this, WiFiScanner.class);
+        this.startService(service);
 
         mainWifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
         receiverWifi = new WifiReceiver();
@@ -63,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         TextView sibling1 = (TextView) findViewById(R.id.sibling_phone1);
         TextView sibling2 = (TextView) findViewById(R.id.sibling_phone2);
 
-        SharedPreferences sharedpreferences = getSharedPreferences("contentProfle", Context.MODE_PRIVATE);
+        sharedpreferences = getSharedPreferences("contentProfle", Context.MODE_PRIVATE);
         name.setText(sharedpreferences.getString("name", ""));
         blood.setText(sharedpreferences.getString("blood", ""));
         sibling1.setText(sharedpreferences.getString("sibling1", ""));
@@ -79,6 +94,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        mBuilder = new NotificationCompat.Builder(this)
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setContentTitle("IamHere")
+                .setPriority(NotificationCompat.PRIORITY_MAX)
+                .setOngoing(false)
+                .setAutoCancel(false)
+                .setContentText("You have been detected.");
+
+        NotificationCompat.InboxStyle inBoxStyle = new NotificationCompat.InboxStyle();
+        inBoxStyle.setBigContentTitle("Personal Details:");
+        inBoxStyle.addLine("Siblings Contact");
+        inBoxStyle.addLine(sharedpreferences.getString("sibling1", ""));
+        inBoxStyle.addLine(sharedpreferences.getString("sibling2", ""));
+        inBoxStyle.addLine("Blood Type " + sharedpreferences.getString("blood", ""));
+        mBuilder.setStyle(inBoxStyle);
+        mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         doInback();
 
     }
@@ -98,11 +129,15 @@ public class MainActivity extends AppCompatActivity {
             {
 
                 connections.add(wifiList.get(i).SSID);
-                if(wifiList.get(i).SSID.contains(ssidKey))
+                if(wifiList.get(i).SSID.length() >= 14 && wifiList.get(i).SSID.contains(ssidKey))
                 {
-                    detection = true;
-                    detectedSSID = wifiList.get(i).SSID.toString();
-                    commands = detectedSSID.substring(ssidKey.length());
+                    if(wifiList.get(i).SSID.substring(ssidKey.length()+2).equals("AA") ||wifiList.get(i).SSID.substring(ssidKey.length()+2).equals(sharedpreferences.getString("blood", "")))
+                    {
+                        detection = true;
+                        detectedSSID = wifiList.get(i).SSID;
+                        commands = detectedSSID.substring(ssidKey.length(), ssidKey.length()+2);
+                        target = detectedSSID.substring(ssidKey.length()+2);
+                    }
                 }
             }
 
@@ -115,20 +150,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                mainWifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
-                receiverWifi = new WifiReceiver();
-                registerReceiver(receiverWifi, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
                 mainWifi.startScan();
                 if (detection)
                 {
-                    Log.v("asd", commands);
-                    if (!r.isPlaying() && commands.equals(onCommands))
+                    if(!mp.isPlaying() && commands.equals(onCommands))
                     {
-                        am.setStreamVolume(AudioManager.STREAM_RING, am.getStreamMaxVolume(AudioManager.STREAM_ALARM), am.getStreamMaxVolume(AudioManager.STREAM_ALARM));
-                        r.play();
+                        am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), am.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
+                        mp.start();
+                        mNotificationManager.notify(512, mBuilder.build());
                     }
                     else if (commands.equals(offCommands)){
-                        r.stop();
+                        mp.stop();
+                        mNotificationManager.cancel(512);
                     }
                 }
                 doInback();
@@ -150,4 +183,6 @@ public class MainActivity extends AppCompatActivity {
                 WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
         super.onResume();
     }
+
+
 }
