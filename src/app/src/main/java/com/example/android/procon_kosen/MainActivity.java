@@ -16,6 +16,7 @@ import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
@@ -39,10 +40,8 @@ public class MainActivity extends AppCompatActivity {
     private String onCommands = "on";
     private String offCommands = "ff";
     private String target;
-    WifiManager mainWifi;
-    WifiReceiver receiverWifi;
-    StringBuilder sb = new StringBuilder();
-    Handler handler = new Handler();
+    //WifiManager mainWifi;
+    //WifiReceiver receiverWifi;
     AudioManager am;
     Uri notification;
     Ringtone r;
@@ -50,28 +49,34 @@ public class MainActivity extends AppCompatActivity {
     NotificationManager mNotificationManager;
     NotificationCompat.Builder mBuilder;
     MediaPlayer mp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Toast.makeText(this, "Main Activity", Toast.LENGTH_LONG).show();
-
+        //Initialize Object
+        //Request permisiion at runtime
         ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1001);
         ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.RECEIVE_BOOT_COMPLETED}, 1002);
 
         am = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
         r = RingtoneManager.getRingtone(getApplicationContext(), notification);
-        mp = MediaPlayer.create(MainActivity.this,R.raw.loudalarm);
+        mp = MediaPlayer.create(MainActivity.this, R.raw.loudalarm);
         mp.setLooping(true);
 
-        Intent service = new Intent(this, WiFiScanner.class);
-        this.startService(service);
+        //mainWifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+        //receiverWifi = new WifiReceiver();
+        //registerReceiver(receiverWifi, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
 
-        mainWifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
-        receiverWifi = new WifiReceiver();
-        registerReceiver(receiverWifi, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
+        //start WiFiscanner service
+        Intent service = new Intent(this, WiFiScanner.class);
+        startService(service);
+
+        Intent mainBroadcaster = new Intent("mainBroadcaster");
+        mainBroadcaster.putExtra("mainstatus", true);
+        sendBroadcast(mainBroadcaster);
 
         TextView name = (TextView) findViewById(R.id.name);
         TextView birthday = (TextView) findViewById(R.id.birthday);
@@ -85,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         blood.setText(sharedpreferences.getString("blood", ""));
         sibling1.setText(sharedpreferences.getString("sibling1", ""));
         sibling2.setText(sharedpreferences.getString("sibling2", ""));
-        
+
         editBtn = (Button) findViewById(R.id.edit_btn);
         editBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,79 +117,58 @@ public class MainActivity extends AppCompatActivity {
         inBoxStyle.addLine("Blood Type " + sharedpreferences.getString("blood", ""));
         mBuilder.setStyle(inBoxStyle);
         mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        doInback();
+
+        registerReceiver(mMessageReceiver, new IntentFilter("command recived"));
+
 
     }
 
-    class WifiReceiver extends BroadcastReceiver
+    @Override
+    protected void onDestroy()
     {
+        super.onDestroy();
+        Intent mainBroadcaster = new Intent("mainBroadcaster");
+        mainBroadcaster.putExtra("mainstatus", false);
+        sendBroadcast(mainBroadcaster);
+    }
 
-        public void onReceive(Context c, Intent intent)
-        {
-            detection = false;
-            ArrayList<String> connections=new ArrayList<String>();
-            ArrayList<Float> Signal_Strenth= new ArrayList<Float>();
-            sb = new StringBuilder();
-            List<ScanResult> wifiList;
-            wifiList = mainWifi.getScanResults();
-            for(int i = 0; i < wifiList.size(); i++)
+
+    private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            // Get extra data included in the Intent
+            String mCommand = null;
+            String mtarget = null;
+            mCommand= intent.getStringExtra("comamnds");
+            mtarget= intent.getStringExtra("target");
+            Log.v("Recieve", mCommand);
+            if(mCommand != null && mtarget != null )
             {
-
-                connections.add(wifiList.get(i).SSID);
-                if(wifiList.get(i).SSID.length() >= 14 && wifiList.get(i).SSID.contains(ssidKey))
+                if(mtarget.equals("AA") || mtarget.equals(sharedpreferences.getString("blood", "")))
                 {
-                    if(wifiList.get(i).SSID.substring(ssidKey.length()+2).equals("AA") ||wifiList.get(i).SSID.substring(ssidKey.length()+2).equals(sharedpreferences.getString("blood", "")))
-                    {
-                        detection = true;
-                        detectedSSID = wifiList.get(i).SSID;
-                        commands = detectedSSID.substring(ssidKey.length(), ssidKey.length()+2);
-                        target = detectedSSID.substring(ssidKey.length()+2);
+                    switch (mCommand) {
+                        case "on":
+                            if (!mp.isPlaying()) {
+                                am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), am.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
+                                mp.start();
+                                mNotificationManager.notify(512, mBuilder.build());
+                            }
+                            break;
+                        case "ff":
+                            mp.stop();
+                            mNotificationManager.cancel(512);
+                            break;
+                        case "nt":
+                            mNotificationManager.notify(512, mBuilder.build());
+                            break;
+                        case "nf":
+                            mNotificationManager.cancel(512);
+                            break;
                     }
                 }
             }
+
 
         }
-    }
-
-    public void doInback()
-    {
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-
-                mainWifi.startScan();
-                if (detection)
-                {
-                    if(!mp.isPlaying() && commands.equals(onCommands))
-                    {
-                        am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), am.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
-                        mp.start();
-                        mNotificationManager.notify(512, mBuilder.build());
-                    }
-                    else if (commands.equals(offCommands)){
-                        mp.stop();
-                        mNotificationManager.cancel(512);
-                    }
-                }
-                doInback();
-            }
-        }, 1000);
-    }
-
-    @Override
-    protected void onPause()
-    {
-        //unregisterReceiver(receiverWifi);
-        super.onPause();
-    }
-
-    @Override
-    protected void onResume()
-    {
-        registerReceiver(receiverWifi, new IntentFilter(
-                WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
-        super.onResume();
-    }
-
-
+    };
 }
