@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Main page -->
-    <string name="app_name">Procon</string>
+    <string name="app_name">IamHere</string>
     <string name="name_label">Name</string>
     <string name="phone_label">Sibling Phone</string>
     <string name="blood_label">Blood Group</string>
