@@ -72,8 +72,8 @@ public class EditProfile extends AppCompatActivity {
     }
 
     public void showDatePickerDialog(View v) {
-        DatePickerFragment dialog = new DatePickerFragment();
-        dialog.DateEditText = (EditText) findViewById(R.id.edit_birthday);
+        EditText DateEditText = (EditText) findViewById(R.id.edit_birthday);
+        DatePickerFragment dialog = new DatePickerFragment(DateEditText);
         dialog.show(getSupportFragmentManager(), "DialogDate");
     }
 

@@ -12,10 +12,30 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
+public class DatePickerFragment extends DialogFragment {
 
-    public EditText DateEditText;
+    private EditText DateEditText;
     private Calendar mCal = Calendar.getInstance();
+
+    public DatePickerFragment (EditText v) {
+        this.DateEditText = v;
+    }
+
+    DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener(){
+        @Override
+        public void onDateSet(DatePicker view, int year, int month, int day) {
+
+            mCal.set(Calendar.YEAR, year);
+            mCal.set(Calendar.MONTH, month);
+            mCal.set(Calendar.DAY_OF_MONTH, day);
+
+            String myFormat = "dd/MM/yyyy"; //In which you need put here
+            SimpleDateFormat dateFormat = new SimpleDateFormat(myFormat, Locale.US);
+
+            DateEditText.setText(dateFormat.format(mCal.getTime()));
+
+        }
+    };
 
     @NonNull
     @Override
@@ -27,21 +47,7 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
         int day = c.get(Calendar.DAY_OF_MONTH);
 
         // Create a new instance of DatePickerDialog and return it
-        return new DatePickerDialog(getActivity(), this, year, month, day);
-    }
-
-    @Override
-    public void onDateSet(DatePicker view, int year, int month, int day) {
-
-        mCal.set(Calendar.YEAR, year);
-        mCal.set(Calendar.MONTH, month);
-        mCal.set(Calendar.DAY_OF_MONTH, day);
-
-        String myFormat = "dd/MM/yyyy"; //In which you need put here
-        SimpleDateFormat dateFormat = new SimpleDateFormat(myFormat, Locale.US);
-
-        DateEditText.setText(dateFormat.format(mCal.getTime()));
-
+        return new DatePickerDialog(getActivity(), date, year, month, day);
     }
 
 }
