@@ -10,9 +10,9 @@ import android.content.Intent;
 public class MyBroadcastReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        Intent App = new Intent(context, MainActivity.class);
+        Intent App = new Intent(context, WiFiScanner.class);
         App.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(App);
+        context.startService(App);
         //Intent service = new Intent(context, WiFiScanner.class);
         //context.startService(service);
     }
