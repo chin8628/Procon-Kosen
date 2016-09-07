@@ -39,7 +39,7 @@ public class EditProfile extends AppCompatActivity {
         nBlood = (Spinner) findViewById(R.id.blood_grp_spinner);
 
         // Get value from EditText and Spinner on Edit-profile page
-        SharedPreferences sharedpreferences = getSharedPreferences("contentProfle", Context.MODE_PRIVATE);
+        SharedPreferences sharedpreferences = getSharedPreferences("contentProfile", Context.MODE_PRIVATE);
         mName.setText(sharedpreferences.getString("name", null));
         mSibling1.setText(sharedpreferences.getString("sibling1", null));
         mSibling2.setText(sharedpreferences.getString("sibling2", null));
@@ -54,7 +54,7 @@ public class EditProfile extends AppCompatActivity {
         mSaveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedpreferences = getSharedPreferences("contentProfle", Context.MODE_PRIVATE);
+                SharedPreferences sharedpreferences = getSharedPreferences("contentProfile", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedpreferences.edit();
 
                 editor.putString("name", mName.getText().toString());
