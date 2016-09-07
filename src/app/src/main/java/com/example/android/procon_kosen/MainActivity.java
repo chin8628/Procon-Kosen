@@ -86,6 +86,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        StringBuilder sb = new StringBuilder();
+        sb.append("You have been detected.\n");
+        sb.append("Personal Details\n");
+        sb.append("Blood Type ").append(sharedpreferences.getString("blood", "")).append("\n");
+        sb.append("Contact :");
+        sb.append(sharedpreferences.getString("sibling1", "" ));
+        sb.append("");
+        sb.append(sharedpreferences.getString("sibling2", ""));
+
         //Build notification
         mBuilder = new NotificationCompat.Builder(this)
                 .setSmallIcon(R.mipmap.ic_launcher)
@@ -93,15 +102,21 @@ public class MainActivity extends AppCompatActivity {
                 .setPriority(NotificationCompat.PRIORITY_MAX)
                 .setOngoing(false)
                 .setAutoCancel(false)
-                .setContentText("You have been detected.");
+                .setContentText(sb.toString());
 
-        NotificationCompat.InboxStyle inBoxStyle = new NotificationCompat.InboxStyle();
+        NotificationCompat.BigTextStyle bigTextStyle = new NotificationCompat.BigTextStyle();
+        bigTextStyle.setBigContentTitle("IamHere");
+        bigTextStyle.bigText(sb.toString());
+        mBuilder.setStyle(bigTextStyle);
+
+        /*NotificationCompat.InboxStyle inBoxStyle = new NotificationCompat.InboxStyle();
         inBoxStyle.setBigContentTitle("Personal Details:");
         inBoxStyle.addLine("Siblings Contact");
         inBoxStyle.addLine(sharedpreferences.getString("sibling1", ""));
         inBoxStyle.addLine(sharedpreferences.getString("sibling2", ""));
         inBoxStyle.addLine("Blood Type " + sharedpreferences.getString("blood", ""));
-        mBuilder.setStyle(inBoxStyle);
+        mBuilder.setStyle(inBoxStyle);*/
+
         mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
         //register reliever from service
