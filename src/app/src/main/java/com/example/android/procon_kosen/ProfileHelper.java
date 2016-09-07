@@ -30,7 +30,7 @@ public class ProfileHelper extends AppCompatActivity {
     public int getAge() throws ParseException {
         // Get string of birthday for parse to Calendar
         SimpleDateFormat sdf = new SimpleDateFormat("dd/M/yyyy", Locale.US);
-        Date date = sdf.parse(this.getmBirthday());
+        Date date = sdf.parse(this.getBirthday());
         Calendar calBirthday = Calendar.getInstance(Locale.US);
         calBirthday.setTime(date);
 
