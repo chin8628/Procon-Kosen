@@ -87,6 +87,7 @@ public class WiFiScanner extends Service {
                 Log.v("Broadcast", status);
                 if (!mainStatus) {
                     Intent k = new Intent(WiFiScanner.this, MainActivity.class);
+                    k.addFlags(intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(k);
                 }
             }
