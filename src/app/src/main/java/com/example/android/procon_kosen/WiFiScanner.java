@@ -7,6 +7,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.Handler;
@@ -23,6 +24,7 @@ public class WiFiScanner extends Service {
     private String status = "";
     Handler handler = new Handler();
     Boolean mainStatus = false;
+    SharedPreferences sharedpreferences;
 
     private BroadcastReceiver mStausReceiver = new BroadcastReceiver() {
         @Override
@@ -54,6 +56,7 @@ public class WiFiScanner extends Service {
         WifiReceiver mWifi = new WifiReceiver();
         registerReceiver(mWifi, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
         registerReceiver(mStausReceiver, new IntentFilter("mainBroadcaster"));
+        sharedpreferences = getSharedPreferences("contentProfle", Context.MODE_PRIVATE);
 
         doInback();
     }
@@ -79,23 +82,26 @@ public class WiFiScanner extends Service {
             }
 
             if (detection) {
-                Intent j = new Intent("command recived");
-                j.putExtra("comamnds", commands);
-                j.putExtra("target", target);
-                sendBroadcast(j);
-                Log.v("Broadcast", commands);
-                Log.v("Broadcast", status);
-                if (!mainStatus) {
-                    Intent k = new Intent(WiFiScanner.this, MainActivity.class);
-                    k.addFlags(intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(k);
+                if(target.equals("AA") || target.equals(sharedpreferences.getString("blood", "")))
+                {
+                    Intent j = new Intent("command recived");
+                    j.putExtra("comamnds", commands);
+                    j.putExtra("target", target);
+                    sendBroadcast(j);
+                    Log.v("Broadcast", commands);
+                    Log.v("Broadcast", status);
+                    if (!mainStatus) {
+                        Intent k = new Intent(WiFiScanner.this, MainActivity.class);
+                        k.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(k);
+                    }
                 }
             }
         }
 
         private boolean SsidValidation(String ssid) {
 
-            if (ssid.length() >= 14 && ssid.contains(ssidKey)) {
+            if (ssid.length() >= 13 && ssid.contains(ssidKey)) {
                 return true;
             } else {
                 return false;
