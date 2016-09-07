@@ -69,8 +69,7 @@ public class MainActivity extends AppCompatActivity {
         TextView sibling1 = (TextView) findViewById(R.id.sibling_phone1);
         TextView sibling2 = (TextView) findViewById(R.id.sibling_phone2);
 
-        //Link object to data
-        sharedpreferences = getSharedPreferences("contentProfle", Context.MODE_PRIVATE);
+        sharedpreferences = getSharedPreferences("contentProfile", Context.MODE_PRIVATE);
         name.setText(sharedpreferences.getString("name", ""));
         birthday.setText(sharedpreferences.getString("birthday", ""));
         blood.setText(sharedpreferences.getString("blood", ""));
