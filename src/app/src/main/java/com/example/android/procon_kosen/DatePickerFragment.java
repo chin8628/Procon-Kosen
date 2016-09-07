@@ -29,8 +29,7 @@ public class DatePickerFragment extends DialogFragment {
             mCal.set(Calendar.MONTH, month);
             mCal.set(Calendar.DAY_OF_MONTH, day);
 
-            String myFormat = "dd/MM/yyyy"; //In which you need put here
-            SimpleDateFormat dateFormat = new SimpleDateFormat(myFormat, Locale.US);
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.US);
 
             DateEditText.setText(dateFormat.format(mCal.getTime()));
 
