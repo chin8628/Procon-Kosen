@@ -27,10 +27,6 @@ public class ProfileHelper extends AppCompatActivity {
         mSiblingPhone2 = sharedpreferences.getString("sibling2", null);
     }
 
-    public String getBirthday(){
-        return this.getmBirthday();
-    }
-
     public int getAge() throws ParseException {
         // Get string of birthday for parse to Calendar
         SimpleDateFormat sdf = new SimpleDateFormat("dd/M/yyyy", Locale.US);
@@ -58,11 +54,11 @@ public class ProfileHelper extends AppCompatActivity {
         return this.mBlood;
     }
 
-    public String getmBirthday() {
+    public String getBirthday() {
         return this.mBirthday;
     }
 
-    public String getSiblingPhone1() {
+    public String[] getSiblingPhone1() {
         //Return array string of number phone
 
         String[] phoneNumber = {this.mSiblingPhone1, this.mSiblingPhone2};
