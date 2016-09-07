@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private NotificationManager mNotificationManager;
     private NotificationCompat.Builder mBuilder;
     private MediaPlayer mp;
+    private boolean alarmSatus = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -136,6 +137,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    protected void onStop()
+    {
+        super.onStop();
+        //Broadcast to service that the application is no longer running
+        Intent mainBroadcaster = new Intent("mainBroadcaster");
+        mainBroadcaster.putExtra("mainstatus", false);
+        sendBroadcast(mainBroadcaster);
+    }
+
+    @Override
+    protected void onPause()
+    {
+        super.onPause();
+        //Broadcast to service that the application is no longer running
+        Intent mainBroadcaster = new Intent("mainBroadcaster");
+        mainBroadcaster.putExtra("mainstatus", false);
+        sendBroadcast(mainBroadcaster);
+    }
+
     private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -150,15 +171,17 @@ public class MainActivity extends AppCompatActivity {
                 {
                     switch (mCommand) {
                         case "on":
-                            if (!mp.isPlaying()) {
+                            if (!alarmSatus) {
                                 am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), am.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
                                 mp.start();
                                 mNotificationManager.notify(512, mBuilder.build());
+                                alarmSatus = true;
                             }
                             break;
                         case "ff":
-                            mp.stop();
+                            mp.pause();
                             mNotificationManager.cancel(512);
+                            alarmSatus = false;
                             break;
                         case "nt":
                             mNotificationManager.notify(512, mBuilder.build());
