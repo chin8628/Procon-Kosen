@@ -24,7 +24,8 @@ public class ProfileHelper extends AppCompatActivity {
         mName = sharedpreferences.getString("name", null);
         mBlood = sharedpreferences.getString("blood", null);
         mBirthday = sharedpreferences.getString("birthday", null);
-        mSiblingPhone1 = sharedpreferences.getString("sibling", null);
+        mSiblingPhone1 = sharedpreferences.getString("sibling1", null);
+        mSiblingPhone2 = sharedpreferences.getString("sibling2", null);
     }
 
     public String getBirthday(){
