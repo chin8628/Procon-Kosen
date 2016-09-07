@@ -1,9 +1,8 @@
 package com.example.android.procon_kosen;
 
-import android.app.ActivityManager;
+
 import android.app.Service;
 import android.content.BroadcastReceiver;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -12,26 +11,21 @@ import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.Handler;
 import android.os.IBinder;
-import android.support.v4.content.LocalBroadcastManager;
-import android.util.Log;
-import android.widget.Toast;
 
 import java.util.List;
 
 public class WiFiScanner extends Service {
 
-    WifiManager mainWifi;
-    private String status = "";
-    Handler handler = new Handler();
-    Boolean mainStatus = false;
-    SharedPreferences sharedpreferences;
+    private WifiManager mainWifi;
+    private Handler handler = new Handler();
+    private Boolean mainStatus = false;
+    private SharedPreferences sharedpreferences;
 
     private BroadcastReceiver mStausReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             // Get extra data included in the Intent
             mainStatus = intent.getBooleanExtra("mainstatus", false);
-            Log.v("Service", String.valueOf(mainStatus));
         }
 
     };
@@ -47,17 +41,18 @@ public class WiFiScanner extends Service {
 
     @Override
     public void onCreate() {
-        // TODO Auto-generated method stub
 
         super.onCreate();
 
-        Toast.makeText(WiFiScanner.this, "Service Started", Toast.LENGTH_SHORT).show();
+
+        //Initalize objects
         mainWifi = (WifiManager) getSystemService(WIFI_SERVICE);
         WifiReceiver mWifi = new WifiReceiver();
         registerReceiver(mWifi, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
         registerReceiver(mStausReceiver, new IntentFilter("mainBroadcaster"));
         sharedpreferences = getSharedPreferences("contentProfle", Context.MODE_PRIVATE);
 
+        //Begin core loop
         doInback();
     }
 
@@ -88,8 +83,6 @@ public class WiFiScanner extends Service {
                     j.putExtra("comamnds", commands);
                     j.putExtra("target", target);
                     sendBroadcast(j);
-                    Log.v("Broadcast", commands);
-                    Log.v("Broadcast", status);
                     if (!mainStatus) {
                         Intent k = new Intent(WiFiScanner.this, MainActivity.class);
                         k.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -100,6 +93,8 @@ public class WiFiScanner extends Service {
         }
 
         private boolean SsidValidation(String ssid) {
+
+            //Check if ssid is valid
 
             if (ssid.length() >= 13 && ssid.contains(ssidKey)) {
                 return true;
