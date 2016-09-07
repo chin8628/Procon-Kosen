@@ -110,14 +110,6 @@ public class MainActivity extends AppCompatActivity {
         bigTextStyle.bigText(sb.toString());
         mBuilder.setStyle(bigTextStyle);
 
-        /*NotificationCompat.InboxStyle inBoxStyle = new NotificationCompat.InboxStyle();
-        inBoxStyle.setBigContentTitle("Personal Details:");
-        inBoxStyle.addLine("Siblings Contact");
-        inBoxStyle.addLine(sharedpreferences.getString("sibling1", ""));
-        inBoxStyle.addLine(sharedpreferences.getString("sibling2", ""));
-        inBoxStyle.addLine("Blood Type " + sharedpreferences.getString("blood", ""));
-        mBuilder.setStyle(inBoxStyle);*/
-
         mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
         //register reliever from service
