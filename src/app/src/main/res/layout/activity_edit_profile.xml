@@ -81,11 +81,25 @@
             android:layout_marginBottom="10dp"
             android:inputType="phone" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/save_btn"
-            android:id="@+id/save_btn" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save_btn"
+                android:id="@+id/save_btn" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancle_btn"
+                android:id="@+id/cancle_btn"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/save_btn"
+                android:layout_toEndOf="@+id/save_btn" />
+        </RelativeLayout>
 
     </LinearLayout>
 

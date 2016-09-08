@@ -16,7 +16,7 @@ import java.util.Arrays;
 
 public class EditProfile extends AppCompatActivity {
 
-    private Button mSaveBtn, mTestBtn;
+    private Button mSaveBtn, mCancleBtn;
     private EditText mName, mSibling1, mSibling2, mBirthday;
     private Spinner nBlood;
 
@@ -66,6 +66,14 @@ public class EditProfile extends AppCompatActivity {
 
                 Intent i = new Intent(EditProfile.this, MainActivity.class);
                 startActivity(i);
+            }
+        });
+
+        mCancleBtn = (Button) findViewById(R.id.cancle_btn);
+        mCancleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 

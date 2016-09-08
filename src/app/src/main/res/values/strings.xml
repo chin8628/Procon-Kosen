@@ -22,6 +22,7 @@
 
     <!-- Universal button -->
     <string name="save_btn">Save</string>
+    <string name="cancle_btn">Cancle</string>
 
     <!-- Blood group Spinner -->
     <string name="blood_group_prompt">Choose a blood group</string>
