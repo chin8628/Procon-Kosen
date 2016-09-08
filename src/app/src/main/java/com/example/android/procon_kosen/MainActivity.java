@@ -34,11 +34,20 @@ public class MainActivity extends AppCompatActivity {
     private NotificationManager mNotificationManager;
     private NotificationCompat.Builder mBuilder;
     private MediaPlayer mp;
+
+    // TODO: Feen edit this typo plz.
     private boolean alarmSatus = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        FirstTimeVisitClass visit = new FirstTimeVisitClass(this);
+        if (!visit.getVisited()) {
+            visit.setVisited();
+            startActivity(new Intent(MainActivity.this, IntroSlide.class));
+        }
+
         setContentView(R.layout.activity_main);
 
         //Request Location and Boot permission if not already granted
@@ -87,16 +96,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Test Introduce app
-        button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, intro_slide.class);
-                startActivity(i);
-            }
-        });
-
         StringBuilder sb = new StringBuilder();
         sb.append("You have been detected.\n");
         sb.append("Personal Details\n");
@@ -137,7 +136,6 @@ public class MainActivity extends AppCompatActivity {
         mainBroadcaster.putExtra("mainstatus", false);
         sendBroadcast(mainBroadcaster);
     }
-
 
     @Override
     protected void onStop()
@@ -194,8 +192,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
-
-
         }
     };
+
 }
