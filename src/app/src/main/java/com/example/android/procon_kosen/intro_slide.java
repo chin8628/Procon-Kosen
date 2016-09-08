@@ -11,7 +11,7 @@ import android.os.Bundle;
 
 public class intro_slide extends FragmentActivity {
 
-    private static final int NUM_PAGES = 2;
+    private static final int NUM_PAGES = 5;
     private ViewPager mPager;
     private PagerAdapter mPagerAdapter;
 
@@ -53,7 +53,7 @@ public class intro_slide extends FragmentActivity {
                     return new IntroFragment3();
                 case 3:
                     return new IntroFragment4();
-                case 5:
+                case 4:
                     return new IntroFragment5();
                 default: return null;
             }
