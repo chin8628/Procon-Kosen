@@ -24,6 +24,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Button button;
+
     private Button editBtn;
     private AudioManager am;
     private Uri notification;
@@ -32,11 +34,20 @@ public class MainActivity extends AppCompatActivity {
     private NotificationManager mNotificationManager;
     private NotificationCompat.Builder mBuilder;
     private MediaPlayer mp;
+
+    // TODO: Feen edit this typo plz.
     private boolean alarmSatus = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        FirstTimeVisitClass visit = new FirstTimeVisitClass(this);
+        if (!visit.getVisited()) {
+            visit.setVisited();
+            startActivity(new Intent(MainActivity.this, IntroSlide.class));
+        }
+
         setContentView(R.layout.activity_main);
 
         //Request Location and Boot permission if not already granted
@@ -82,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, EditProfile.class);
                 startActivity(i);
-
             }
         });
 
@@ -126,7 +136,6 @@ public class MainActivity extends AppCompatActivity {
         mainBroadcaster.putExtra("mainstatus", false);
         sendBroadcast(mainBroadcaster);
     }
-
 
     @Override
     protected void onStop()
@@ -183,8 +192,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
-
-
         }
     };
+
 }
