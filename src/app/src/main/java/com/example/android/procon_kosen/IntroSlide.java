@@ -9,7 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class intro_slide extends FragmentActivity {
+public class IntroSlide extends FragmentActivity {
 
     private static final int NUM_PAGES = 5;
     private ViewPager mPager;
@@ -30,11 +30,7 @@ public class intro_slide extends FragmentActivity {
 
     @Override
     public void onBackPressed() {
-        if (mPager.getCurrentItem() == 0) {
-            super.onBackPressed();
-        } else {
-            mPager.setCurrentItem(mPager.getCurrentItem() - 1);
-        }
+        mPager.setCurrentItem(mPager.getCurrentItem() - 1);
     }
 
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
