@@ -33,7 +33,7 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".intro_slide" />
+        <activity android:name=".IntroSlide" />
         <activity android:name=".IntroFragment2"></activity>
     </application>
 
