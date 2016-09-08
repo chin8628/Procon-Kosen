@@ -24,6 +24,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Button button;
+
     private Button editBtn;
     private AudioManager am;
     private Uri notification;
@@ -82,7 +84,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, EditProfile.class);
                 startActivity(i);
+            }
+        });
 
+        // Test Introduce app
+        button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, intro_slide.class);
+                startActivity(i);
             }
         });
 

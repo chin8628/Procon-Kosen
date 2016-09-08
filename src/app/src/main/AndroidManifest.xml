@@ -31,7 +31,10 @@
         <service
             android:name=".WiFiScanner"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+
+        <activity android:name=".intro_slide" />
+        <activity android:name=".IntroFragment2"></activity>
     </application>
 
 </manifest>
