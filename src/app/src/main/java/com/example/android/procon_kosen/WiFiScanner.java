@@ -23,6 +23,7 @@ public class WiFiScanner extends Service {
     private Boolean mainStatus = false;
     private SharedPreferences sharedpreferences;
     private String temp = "";
+    //ProfileHelper ph = new ProfileHelper();
 
     private BroadcastReceiver mStausReceiver = new BroadcastReceiver() {
         @Override
@@ -53,7 +54,7 @@ public class WiFiScanner extends Service {
         WifiReceiver mWifi = new WifiReceiver();
         registerReceiver(mWifi, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
         registerReceiver(mStausReceiver, new IntentFilter("mainBroadcaster"));
-        sharedpreferences = getSharedPreferences("contentProfle", Context.MODE_PRIVATE);
+        sharedpreferences = getSharedPreferences("contentProfile", Context.MODE_PRIVATE);
 
         //Begin core loop
         doInback();
@@ -79,8 +80,7 @@ public class WiFiScanner extends Service {
                     ageGroup = wifiList.get(i).SSID.substring(ssidKey.length() + 2,ssidKey.length() + 4);
                     target = wifiList.get(i).SSID.substring(ssidKey.length() + 4);
                     Log.v("asd", commands + ageGroup + target + sharedpreferences.getString("blood", ""));
-                    /*ProfileHelper ph = new ProfileHelper();
-                    try {
+                    /*try {
                         age = ph.getAge();
                     }
                     catch (ParseException e)
