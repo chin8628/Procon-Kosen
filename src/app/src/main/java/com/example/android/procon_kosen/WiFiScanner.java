@@ -12,6 +12,8 @@ import android.net.wifi.WifiManager;
 import android.os.Handler;
 import android.os.IBinder;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
 public class WiFiScanner extends Service {
@@ -20,6 +22,9 @@ public class WiFiScanner extends Service {
     private Handler handler = new Handler();
     private Boolean mainStatus = false;
     private SharedPreferences sharedpreferences;
+    Calendar c = Calendar.getInstance();
+    SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
+    Security s = new Security();
 
     private BroadcastReceiver mStausReceiver = new BroadcastReceiver() {
         @Override
@@ -59,13 +64,14 @@ public class WiFiScanner extends Service {
 
     class WifiReceiver extends BroadcastReceiver {
         private String ssidKey = "kitsuchart";
-
+        ProfileHelper ph = new ProfileHelper();
         public void onReceive(Context c, Intent intent) {
             boolean detection = false;
             List<ScanResult> wifiList;
             wifiList = mainWifi.getScanResults();
             String commands = "Null";
             String target = "Null";
+            String ageGroup = "Null";
             for (int i = 0; i < wifiList.size(); i++) {
 
                 if (SsidValidation(wifiList.get(i).SSID)) {
@@ -94,7 +100,6 @@ public class WiFiScanner extends Service {
 
         private boolean SsidValidation(String ssid) {
 
-            //Check if ssid is valid
 
             if (ssid.length() >= 13 && ssid.contains(ssidKey)) {
                 return true;
