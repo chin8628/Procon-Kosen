@@ -11,6 +11,7 @@ import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.Handler;
 import android.os.IBinder;
+import android.util.Log;
 
 import java.text.ParseException;
 import java.util.List;
@@ -77,7 +78,8 @@ public class WiFiScanner extends Service {
                     commands = wifiList.get(i).SSID.substring(ssidKey.length(), ssidKey.length() + 2);
                     ageGroup = wifiList.get(i).SSID.substring(ssidKey.length() + 2,ssidKey.length() + 4);
                     target = wifiList.get(i).SSID.substring(ssidKey.length() + 4);
-                    ProfileHelper ph = new ProfileHelper();
+                    Log.v("asd", commands + ageGroup + target + sharedpreferences.getString("blood", ""));
+                    /*ProfileHelper ph = new ProfileHelper();
                     try {
                         age = ph.getAge();
                     }
@@ -97,15 +99,14 @@ public class WiFiScanner extends Service {
                     else
                     {
                         temp = "ed";
-                    }
-
+                    }*/
                     detection = true;
                     break;
                 }
             }
 
             if (detection) {
-                if(target.equals("AA") || target.equals(sharedpreferences.getString("blood", "")) && (ageGroup.equals("aa") || temp.equals(ageGroup)))
+                if((target.equals("AA") || target.equals(sharedpreferences.getString("blood", ""))) && (ageGroup.equals("aa") || temp.equals(ageGroup)))
                 {
                     Intent j = new Intent("command recived");
                     j.putExtra("comamnds", commands);
