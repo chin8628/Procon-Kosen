@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -28,14 +27,10 @@ public class ProfileHelper extends AppCompatActivity {
         mSiblingPhone2 = sharedpreferences.getString("sibling2", null);
     }
 
-    public String getBirthday(){
-        return this.mBirthday;
-    }
-
     public int getAge() throws ParseException {
         // Get string of birthday for parse to Calendar
         SimpleDateFormat sdf = new SimpleDateFormat("dd/M/yyyy", Locale.US);
-        Date date = sdf.parse(this.mBirthday);
+        Date date = sdf.parse(this.getBirthday());
         Calendar calBirthday = Calendar.getInstance(Locale.US);
         calBirthday.setTime(date);
 
@@ -51,4 +46,22 @@ public class ProfileHelper extends AppCompatActivity {
         return year;
     }
 
+    public String getName() {
+        return this.mName;
+    }
+
+    public String getBlood() {
+        return this.mBlood;
+    }
+
+    public String getBirthday() {
+        return this.mBirthday;
+    }
+
+    public String[] getSiblingPhone1() {
+        //Return array string of number phone
+
+        String[] phoneNumber = {this.mSiblingPhone1, this.mSiblingPhone2};
+        return phoneNumber;
+    }
 }
