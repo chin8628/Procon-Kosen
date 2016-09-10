@@ -2,6 +2,7 @@ package com.example.android.procon_kosen;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 
 import java.text.ParseException;
@@ -18,8 +19,7 @@ public class ProfileHelper extends AppCompatActivity {
     private String mSiblingPhone1;
     private String mSiblingPhone2;
 
-    public ProfileHelper() {
-        SharedPreferences sharedpreferences = getSharedPreferences("contentProfile", Context.MODE_PRIVATE);
+    public ProfileHelper(SharedPreferences sharedpreferences) {
         mName = sharedpreferences.getString("name", null);
         mBlood = sharedpreferences.getString("blood", null);
         mBirthday = sharedpreferences.getString("birthday", null);
