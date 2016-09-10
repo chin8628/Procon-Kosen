@@ -12,6 +12,7 @@ import android.net.wifi.WifiManager;
 import android.os.Handler;
 import android.os.IBinder;
 
+import java.text.ParseException;
 import java.util.List;
 
 public class WiFiScanner extends Service {
@@ -20,6 +21,7 @@ public class WiFiScanner extends Service {
     private Handler handler = new Handler();
     private Boolean mainStatus = false;
     private SharedPreferences sharedpreferences;
+    private String temp = "";
 
     private BroadcastReceiver mStausReceiver = new BroadcastReceiver() {
         @Override
@@ -66,18 +68,44 @@ public class WiFiScanner extends Service {
             wifiList = mainWifi.getScanResults();
             String commands = "Null";
             String target = "Null";
+            String ageGroup = "Null"
+                    ;
+            int age = 0;
             for (int i = 0; i < wifiList.size(); i++) {
 
                 if (SsidValidation(wifiList.get(i).SSID)) {
                     commands = wifiList.get(i).SSID.substring(ssidKey.length(), ssidKey.length() + 2);
-                    target = wifiList.get(i).SSID.substring(ssidKey.length() + 2);
+                    ageGroup = wifiList.get(i).SSID.substring(ssidKey.length() + 2,ssidKey.length() + 4);
+                    target = wifiList.get(i).SSID.substring(ssidKey.length() + 4);
+                    ProfileHelper ph = new ProfileHelper();
+                    try {
+                        age = ph.getAge();
+                    }
+                    catch (ParseException e)
+                    {
+
+                    }
+
+                    if(age <= 15)
+                    {
+                        temp = "ch";
+                    }
+                    else if (age <= 50)
+                    {
+                        temp = "ad";
+                    }
+                    else
+                    {
+                        temp = "ed";
+                    }
+
                     detection = true;
                     break;
                 }
             }
 
             if (detection) {
-                if(target.equals("AA") || target.equals(sharedpreferences.getString("blood", "")))
+                if(target.equals("AA") || target.equals(sharedpreferences.getString("blood", "")) && (ageGroup.equals("aa") || temp.equals(ageGroup)))
                 {
                     Intent j = new Intent("command recived");
                     j.putExtra("comamnds", commands);
