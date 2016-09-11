@@ -14,6 +14,8 @@ import android.os.IBinder;
 import android.util.Log;
 
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
 public class WiFiScanner extends Service {
@@ -22,7 +24,13 @@ public class WiFiScanner extends Service {
     private Handler handler = new Handler();
     private Boolean mainStatus = false;
     private SharedPreferences sharedpreferences;
-    private String temp = "";
+    private String temp = "ch";
+    private String keyComand[] = {"on", "ff", "nt", "nf"};
+    private String keyAge[] = {"aa", "ch"};
+    private String keyBlood[] = {"AA", "AB"};
+    private String commands = "Null";
+    private String target = "Null";
+    private String ageGroup = "Null";
     //ProfileHelper ph = new ProfileHelper();
 
     private BroadcastReceiver mStausReceiver = new BroadcastReceiver() {
@@ -56,6 +64,7 @@ public class WiFiScanner extends Service {
         registerReceiver(mStausReceiver, new IntentFilter("mainBroadcaster"));
         sharedpreferences = getSharedPreferences("contentProfile", Context.MODE_PRIVATE);
 
+
         //Begin core loop
         doInback();
     }
@@ -68,18 +77,11 @@ public class WiFiScanner extends Service {
             boolean detection = false;
             List<ScanResult> wifiList;
             wifiList = mainWifi.getScanResults();
-            String commands = "Null";
-            String target = "Null";
-            String ageGroup = "Null"
-                    ;
             int age = 0;
             for (int i = 0; i < wifiList.size(); i++) {
 
                 if (SsidValidation(wifiList.get(i).SSID)) {
-                    commands = wifiList.get(i).SSID.substring(ssidKey.length(), ssidKey.length() + 2);
-                    ageGroup = wifiList.get(i).SSID.substring(ssidKey.length() + 2,ssidKey.length() + 4);
-                    target = wifiList.get(i).SSID.substring(ssidKey.length() + 4);
-                    Log.v("asd", commands + ageGroup + target + sharedpreferences.getString("blood", ""));
+                    //Log.v("asd", commands + ageGroup + target + sharedpreferences.getString("blood", ""));
                     /*try {
                         age = ph.getAge();
                     }
@@ -106,8 +108,6 @@ public class WiFiScanner extends Service {
             }
 
             if (detection) {
-                if((target.equals("AA") || target.equals(sharedpreferences.getString("blood", ""))) && (ageGroup.equals("aa") || temp.equals(ageGroup)))
-                {
                     Intent j = new Intent("command recived");
                     j.putExtra("comamnds", commands);
                     j.putExtra("target", target);
@@ -116,7 +116,6 @@ public class WiFiScanner extends Service {
                         Intent k = new Intent(WiFiScanner.this, MainActivity.class);
                         k.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(k);
-                    }
                 }
             }
         }
@@ -125,11 +124,29 @@ public class WiFiScanner extends Service {
 
             //Check if ssid is valid
 
-            if (ssid.length() >= 13 && ssid.contains(ssidKey)) {
-                return true;
-            } else {
-                return false;
+            Calendar c = Calendar.getInstance();
+            SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
+            String formattedDate = df.format(c.getTime());
+            int i, j ,k;
+            for(i=0;i<4;i++)
+            {
+                for(j=0;j<2;j++)
+                {
+                    for(k=0;k<2;k++)
+                    {
+                        if(ssid.equals(Integer.toString((formattedDate+keyComand[i]+keyAge[j]+keyBlood[k]).hashCode())))
+                        {
+                            commands = keyComand[i];
+                            ageGroup = keyAge[j];
+                            target = keyBlood[k];
+                            return true;
+
+                        }
+                    }
+                }
             }
+            return false;
+
         }
     }
 
