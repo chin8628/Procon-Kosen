@@ -54,7 +54,7 @@ public class EditProfile extends AppCompatActivity {
         mSaveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedpreferences = getSharedPreferences("contentProfile", Context.MODE_PRIVATE);
+                SharedPreferences sharedpreferences = getBaseContext().getSharedPreferences("contentProfile", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedpreferences.edit();
 
                 editor.putString("name", mName.getText().toString());

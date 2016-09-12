@@ -6,7 +6,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.SharedPreferences;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.Handler;
@@ -23,15 +22,13 @@ public class WiFiScanner extends Service {
     private WifiManager mainWifi;
     private Handler handler = new Handler();
     private Boolean mainStatus = false;
-    private SharedPreferences sharedpreferences;
     private String temp = "ch";
     private String keyComand[] = {"on", "ff", "nt", "nf"};
-    private String keyAge[] = {"aa", "ch"};
-    private String keyBlood[] = {"AA", "AB"};
     private String commands = "Null";
     private String target = "Null";
     private String ageGroup = "Null";
-    //ProfileHelper ph = new ProfileHelper();
+    private Context context;
+    private ProfileHelper ph;
 
     private BroadcastReceiver mStausReceiver = new BroadcastReceiver() {
         @Override
@@ -56,13 +53,15 @@ public class WiFiScanner extends Service {
 
         super.onCreate();
 
+        ph = new ProfileHelper(this);
 
         //Initalize objects
         mainWifi = (WifiManager) getSystemService(WIFI_SERVICE);
         WifiReceiver mWifi = new WifiReceiver();
         registerReceiver(mWifi, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
         registerReceiver(mStausReceiver, new IntentFilter("mainBroadcaster"));
-        sharedpreferences = getSharedPreferences("contentProfile", Context.MODE_PRIVATE);
+        String keyAge[] = {"aa", "ch"};
+        String keyBlood[] = {"AA", ph.getBlood()};
 
 
         //Begin core loop
@@ -77,31 +76,12 @@ public class WiFiScanner extends Service {
             boolean detection = false;
             List<ScanResult> wifiList;
             wifiList = mainWifi.getScanResults();
-            int age = 0;
+
+
+
             for (int i = 0; i < wifiList.size(); i++) {
 
                 if (SsidValidation(wifiList.get(i).SSID)) {
-                    //Log.v("asd", commands + ageGroup + target + sharedpreferences.getString("blood", ""));
-                    /*try {
-                        age = ph.getAge();
-                    }
-                    catch (ParseException e)
-                    {
-
-                    }
-
-                    if(age <= 15)
-                    {
-                        temp = "ch";
-                    }
-                    else if (age <= 50)
-                    {
-                        temp = "ad";
-                    }
-                    else
-                    {
-                        temp = "ed";
-                    }*/
                     detection = true;
                     break;
                 }
@@ -123,10 +103,31 @@ public class WiFiScanner extends Service {
         private boolean SsidValidation(String ssid) {
 
             //Check if ssid is valid
-
+            int age = 0;
             Calendar c = Calendar.getInstance();
             SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
             String formattedDate = df.format(c.getTime());
+            String keyBlood[] = {"AA", ph.getBlood()};
+            try {
+                age = ph.getAge();
+            }
+            catch (ParseException e){
+                // Nothing do anything
+            }
+            Log.v("age", Integer.toString(age));
+            if(age <= 15)
+            {
+                temp = "ch";
+            }
+            else if (age <= 50)
+            {
+                temp = "ad";
+            }
+            else
+            {
+                temp = "ed";
+            }
+            String keyAge[] = {"aa", temp};
             int i, j ,k;
             for(i=0;i<4;i++)
             {

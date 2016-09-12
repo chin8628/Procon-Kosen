@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -21,12 +22,12 @@ public class ProfileHelper extends AppCompatActivity {
     private SharedPreferences mSpf;
 
     public ProfileHelper(Context v) {
-        mSpf = v.getSharedPreferences("contentProfile", MODE_PRIVATE);
-        mName = mSpf.getString("name", null);
-        mBlood = mSpf.getString("blood", null);
-        mBirthday = mSpf.getString("birthday", null);
-        mSiblingPhone1 = mSpf.getString("sibling1", null);
-        mSiblingPhone2 = mSpf.getString("sibling2", null);
+        mSpf = v.getSharedPreferences("contentProfile", Context.MODE_PRIVATE);
+        mName = mSpf.getString("name", "");
+        mBlood = mSpf.getString("blood", "");
+        mBirthday = mSpf.getString("birthday", "");
+        mSiblingPhone1 = mSpf.getString("sibling1", "");
+        mSiblingPhone2 = mSpf.getString("sibling2", "");
     }
 
     public int getAge() throws ParseException {
@@ -49,20 +50,25 @@ public class ProfileHelper extends AppCompatActivity {
     }
 
     public String getName() {
+        mName = mSpf.getString("name", "");
         return this.mName;
     }
 
     public String getBlood() {
+        mBlood = mSpf.getString("blood", "");
         return this.mBlood;
     }
 
     public String getBirthday() {
+        mBirthday = mSpf.getString("birthday", "");
         return this.mBirthday;
     }
 
     public String[] getSiblingPhone1() {
         //Return array string of number phone
 
+        mSiblingPhone1 = mSpf.getString("sibling1", "");
+        mSiblingPhone2 = mSpf.getString("sibling2", "");
         String[] phoneNumber = {this.mSiblingPhone1, this.mSiblingPhone2};
         return phoneNumber;
     }
