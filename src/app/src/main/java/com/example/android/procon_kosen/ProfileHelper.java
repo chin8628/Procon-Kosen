@@ -2,6 +2,7 @@ package com.example.android.procon_kosen;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 
 import java.text.ParseException;
@@ -17,14 +18,15 @@ public class ProfileHelper extends AppCompatActivity {
     private String mBirthday;
     private String mSiblingPhone1;
     private String mSiblingPhone2;
+    private SharedPreferences mSpf;
 
-    public ProfileHelper() {
-        SharedPreferences sharedpreferences = getSharedPreferences("contentProfile", Context.MODE_PRIVATE);
-        mName = sharedpreferences.getString("name", null);
-        mBlood = sharedpreferences.getString("blood", null);
-        mBirthday = sharedpreferences.getString("birthday", null);
-        mSiblingPhone1 = sharedpreferences.getString("sibling1", null);
-        mSiblingPhone2 = sharedpreferences.getString("sibling2", null);
+    public ProfileHelper(Context v) {
+        mSpf = v.getSharedPreferences("contentProfile", MODE_PRIVATE);
+        mName = mSpf.getString("name", null);
+        mBlood = mSpf.getString("blood", null);
+        mBirthday = mSpf.getString("birthday", null);
+        mSiblingPhone1 = mSpf.getString("sibling1", null);
+        mSiblingPhone2 = mSpf.getString("sibling2", null);
     }
 
     public int getAge() throws ParseException {
