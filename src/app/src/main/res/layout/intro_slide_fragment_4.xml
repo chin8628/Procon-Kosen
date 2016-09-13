@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/content"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_purple">
+    android:gravity="center_horizontal"
+    android:paddingBottom="20dp"
+    android:paddingTop="55dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:background="@color/colorIntro">
 
-    <TextView style="?android:textAppearanceMedium"
-        android:padding="16dp"
+    <ImageView
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:id="@+id/imageView"
+        android:src="@mipmap/intro5"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        style="?android:textAppearanceMedium"
+        android:layout_marginTop="20dp"
+        android:padding="15dp"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
         android:lineSpacingMultiplier="1.2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="This is forth page." />
-</ScrollView>
+        android:text="@string/intro4"
+        android:id="@+id/textView" />
+
+</LinearLayout>

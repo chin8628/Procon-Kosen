@@ -32,7 +32,12 @@
         <item>AB</item>
     </string-array>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Introduce app -->
+    <string name="intro1">Welcome to IamHere.</string>
+    <string name="intro2">IamHere helps rescuer locate you when a disaster happens.</string>
+    <string name="intro3">When the disaster happened, the rescuer will find you by making your phone generate sound.</string>
+    <string name="intro4">It\'s automatic, You don\'t have to do anything.</string>
+    <string name="intro5">Just please insert your personal information to make rescuing easier.</string>
+    <string name="intro_button_edit_profile">Edit Profile</string>
 
 </resources>
