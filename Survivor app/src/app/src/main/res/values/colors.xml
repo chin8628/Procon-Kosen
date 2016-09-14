@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#E65100</color>
-    <color name="colorPrimaryDark">#BF360C</color>
-    <color name="colorAccent">@android:color/holo_orange_light</color>
+    <color name="colorPrimary">#dc5041</color>
+    <color name="colorPrimaryDark">#a82112</color>
+    <color name="colorAccent">#ff9708</color>
 
     <!-- Intro color page -->
     <color name="colorIntro">#FFA726</color>
 
     <!-- Main page -->
-    <color name="colorBtnGroup">#666</color>
+    <!--<color name="colorBtnGroup">#FFA726</color>-->
+    <color name="colorBtnGroup">#E65100</color>
 
 </resources>
