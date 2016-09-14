@@ -19,8 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/edit_name"
-            android:id="@+id/edit_name_label" />
+            android:text="@string/edit_name" />
 
         <EditText
             android:layout_width="match_parent"
@@ -34,8 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/edit_birthday"
-            android:id="@+id/edit_birthday_label" />
+            android:text="@string/edit_birthday" />
 
         <EditText
             android:layout_width="match_parent"
@@ -49,8 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/edit_blood"
-            android:id="@+id/edit_blood_label" />
+            android:text="@string/edit_blood" />
 
         <Spinner
             android:layout_width="match_parent"
@@ -63,8 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/edit_sibling"
-            android:id="@+id/edit_sibling_label" />
+            android:text="@string/edit_sibling" />
 
         <EditText
             android:layout_width="match_parent"

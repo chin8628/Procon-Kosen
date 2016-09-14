@@ -7,8 +7,6 @@
     <string name="blood_label">Blood Group</string>
     <string name="birthday_label">Birthday</string>
     <string name="button_edit_profile">Edit Profile</string>
-    <string name="checking_label">Overview status application</string>
-    <string name="sound_check_label">Sound alarm checking</string>
 
     <!-- Sound -->
     <string name="alarm_btn">Enable Sound</string>
