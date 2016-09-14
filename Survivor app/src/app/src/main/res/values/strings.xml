@@ -11,8 +11,8 @@
     <string name="sound_check_label">Sound alarm checking</string>
 
     <!-- Sound -->
-    <string name="button_check">Check</string>
-    <string name="button_heard">Heard</string>
+    <string name="alarm_btn">Enable Sound</string>
+    <string name="silence_btn">Disable Sound</string>
 
     <!-- Edit profile page -->
     <string name="edit_name">Name</string>

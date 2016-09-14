@@ -7,14 +7,14 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         tools:context="com.example.android.procon_kosen.MainActivity" >
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:paddingLeft="@dimen/activity_vertical_margin"
             android:paddingRight="@dimen/activity_vertical_margin"
             android:paddingTop="@dimen/activity_vertical_margin"
@@ -93,14 +93,34 @@
                 android:layout_below="@+id/sibling_phone1"
                 android:id="@+id/sibling_phone2" />
 
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:background="@color/colorPrimary" >
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
                 android:text="@string/button_edit_profile"
                 android:id="@+id/edit_btn"
-                android:layout_below="@+id/sibling_phone2" />
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alarm_btn"
+                android:id="@+id/alarm_sound_btn"
+                android:layout_alignTop="@+id/edit_btn"
+                android:layout_toRightOf="@+id/edit_btn"
+                android:layout_toEndOf="@+id/edit_btn" />
         </RelativeLayout>
 
     </LinearLayout>
