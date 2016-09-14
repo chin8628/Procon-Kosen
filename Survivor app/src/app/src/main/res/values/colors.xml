@@ -6,4 +6,8 @@
 
     <!-- Intro color page -->
     <color name="colorIntro">#FFA726</color>
+
+    <!-- Main page -->
+    <color name="colorBtnGroup">#666</color>
+
 </resources>
