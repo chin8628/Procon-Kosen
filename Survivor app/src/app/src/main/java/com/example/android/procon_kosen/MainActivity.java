@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private NotificationCompat.Builder mBuilder;
     private MediaPlayer mp;
     private NotificationBar nb;
+    private boolean waiting = true;
 
     // TODO: Feem edit this typo plz.
     private boolean alarmSatus = false;
