@@ -9,5 +9,6 @@
 
     <!-- Main page -->
     <color name="colorBtnGroup">#a82112</color>
+    <color name="colorNotification">#E65100</color>
 
 </resources>
