@@ -136,7 +136,7 @@
         android:layout_marginTop="69dp"
         android:layout_above="@+id/btnGroup"
         android:layout_centerHorizontal="true"
-        android:id="@+id/frameLayout">
+        android:id="@+id/notification_bar">
 
         <TextView
             android:layout_width="wrap_content"
@@ -144,7 +144,7 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="@string/notify_detected"
             android:textColor="#FFF"
-            android:id="@+id/notification" />
+            android:id="@+id/notification_text" />
     </FrameLayout>
 
     <RelativeLayout
