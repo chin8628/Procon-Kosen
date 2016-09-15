@@ -1,3 +1,0 @@
-CHANGED,E:\Work\Git Kraken\Procon-Kosen\src\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\android\procon_kosen\ProfileHelper$override.class
-CHANGED,E:\Work\Git Kraken\Procon-Kosen\src\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
-CHANGED,E:\Work\Git Kraken\Procon-Kosen\src\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\android\procon_kosen\WiFiScanner$WifiReceiver$override.class
