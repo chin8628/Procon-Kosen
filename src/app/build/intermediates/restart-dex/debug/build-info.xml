@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="arm64-v8a,armeabi-v7a,armeabi"
+    api-level="24"
+    density="560dpi"
+    format="7"
+    timestamp="167086679769879"
+    token="2159613352307705405" >
+
+    <task
+        name="javac"
+        duration="259" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="32" />
+    <task
+        name="verifier"
+        duration="6" />
+
+    <artifact
+        location="E:\Work\Git Kraken\Procon-Kosen\src\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+        type="DEX" />
+
+    <build timestamp="165242969016892" >
+        <artifact
+            location="E:\Work\Git Kraken\Procon-Kosen\src\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build timestamp="167086679769879" >
+        <artifact
+            location="E:\Work\Git Kraken\Procon-Kosen\src\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+            type="DEX" />
+    </build>
+
+</instant-run>
