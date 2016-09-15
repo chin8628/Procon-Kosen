@@ -14,7 +14,6 @@
     <ImageView
         android:layout_width="230dp"
         android:layout_height="230dp"
-        android:id="@+id/imageView"
         android:src="@mipmap/intro5"
         android:layout_gravity="center_horizontal" />
 
@@ -27,7 +26,6 @@
         android:lineSpacingMultiplier="1.2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/intro2"
-        android:id="@+id/textView" />
+        android:text="@string/intro2" />
 
 </LinearLayout>

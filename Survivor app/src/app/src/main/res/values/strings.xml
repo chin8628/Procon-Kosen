@@ -7,12 +7,10 @@
     <string name="blood_label">Blood Group</string>
     <string name="birthday_label">Birthday</string>
     <string name="button_edit_profile">Edit Profile</string>
-    <string name="checking_label">Overview status application</string>
-    <string name="sound_check_label">Sound alarm checking</string>
 
     <!-- Sound -->
-    <string name="button_check">Check</string>
-    <string name="button_heard">Heard</string>
+    <string name="alarm_btn">Enable Sound</string>
+    <string name="silence_btn">Disable Sound</string>
 
     <!-- Edit profile page -->
     <string name="edit_name">Name</string>
@@ -22,7 +20,7 @@
 
     <!-- Universal button -->
     <string name="save_btn">Save</string>
-    <string name="cancle_btn">Cancle</string>
+    <string name="cancel_btn">Cancel</string>
 
     <!-- Blood group Spinner -->
     <string name="blood_group_prompt">Choose a blood group</string>
@@ -40,5 +38,8 @@
     <string name="intro4">It\'s automatic, You don\'t have to do anything.</string>
     <string name="intro5">Just please insert your personal information to make rescuing easier.</string>
     <string name="intro_button_edit_profile">Edit Profile</string>
+
+    <!-- Notification -->
+    <string name="notify_detected">IamHere found Rescuer-Signal.</string>
 
 </resources>

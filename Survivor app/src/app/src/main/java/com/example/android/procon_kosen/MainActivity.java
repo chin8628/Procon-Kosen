@@ -19,12 +19,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
-    private Button button;
 
     private Button editBtn;
     private AudioManager am;
@@ -35,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private NotificationCompat.Builder mBuilder;
     private MediaPlayer mp;
 
-    // TODO: Feen edit this typo plz.
+    // TODO: Feem edit this typo plz.
     private boolean alarmSatus = false;
 
     @Override
