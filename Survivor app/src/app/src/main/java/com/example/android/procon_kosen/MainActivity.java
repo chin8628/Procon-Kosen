@@ -26,6 +26,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private Button editBtn;
+    private Button soundButton;
     private AudioManager am;
     private Uri notification;
     private Ringtone r;
@@ -33,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     private NotificationManager mNotificationManager;
     private NotificationCompat.Builder mBuilder;
     private MediaPlayer mp;
+    private NotificationBar nb;
+    private boolean waiting = true;
 
     // TODO: Feem edit this typo plz.
     private boolean alarmSatus = false;
@@ -40,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        alarmSatus = false;
 
         FirstTimeVisitClass visit = new FirstTimeVisitClass(this);
         if (!visit.getVisited()) {
@@ -62,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         r = RingtoneManager.getRingtone(getApplicationContext(), notification);
         mp = MediaPlayer.create(MainActivity.this, R.raw.loudalarm);
         mp.setLooping(true);
-
+        nb = new NotificationBar(this);
         //Start Background Wifi Service
         Intent service = new Intent(this, WiFiScanner.class);
         startService(service);
@@ -92,6 +96,28 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, EditProfile.class);
                 startActivity(i);
+            }
+        });
+
+        soundButton = (Button) findViewById(R.id.soundButton);
+        soundButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!alarmSatus) {
+                    am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), am.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
+                    mp.start();
+                    mNotificationManager.notify(512, mBuilder.build());
+                    alarmSatus = true;
+                    nb.show();
+                    soundButton.setText(R.string.silence_btn);
+                }
+                else {
+                    mp.pause();
+                    mNotificationManager.cancel(512);
+                    alarmSatus = false;
+                    nb.hide();
+                    soundButton.setText(R.string.alarm_btn);
+                }
             }
         });
 
@@ -175,18 +201,24 @@ public class MainActivity extends AppCompatActivity {
                                 mp.start();
                                 mNotificationManager.notify(512, mBuilder.build());
                                 alarmSatus = true;
+                                nb.show();
+                                soundButton.setText(R.string.silence_btn);
                             }
                             break;
                         case "ff":
                             mp.pause();
                             mNotificationManager.cancel(512);
                             alarmSatus = false;
+                            nb.hide();
+                            soundButton.setText(R.string.alarm_btn);
                             break;
                         case "nt":
                             mNotificationManager.notify(512, mBuilder.build());
+                            nb.show();
                             break;
                         case "nf":
                             mNotificationManager.cancel(512);
+                            nb.hide();
                             break;
                     }
                 }

@@ -114,7 +114,6 @@ public class WiFiScanner extends Service {
             catch (ParseException e){
                 // Nothing do anything
             }
-            Log.v("age", Integer.toString(age));
             if(age <= 15)
             {
                 temp = "ch";
@@ -158,7 +157,7 @@ public class WiFiScanner extends Service {
                 mainWifi.startScan();
                 doInback();
             }
-        }, 1000);
+        }, 30000);
     }
 
 }
