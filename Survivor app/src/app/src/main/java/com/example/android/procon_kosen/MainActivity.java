@@ -108,15 +108,17 @@ public class MainActivity extends AppCompatActivity {
                     mp.start();
                     mNotificationManager.notify(512, mBuilder.build());
                     alarmSatus = true;
-                    nb.show();
+                    //nb.show();
                     soundButton.setText(R.string.silence_btn);
+                    soundButton.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.ic_volume_off_black_24dp,0,0,0);
                 }
                 else {
                     mp.pause();
                     mNotificationManager.cancel(512);
                     alarmSatus = false;
-                    nb.hide();
+                    //nb.hide();
                     soundButton.setText(R.string.alarm_btn);
+                    soundButton.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.ic_volume_up_black_24dp,0,0,0);
                 }
             }
         });
@@ -203,6 +205,7 @@ public class MainActivity extends AppCompatActivity {
                                 alarmSatus = true;
                                 nb.show();
                                 soundButton.setText(R.string.silence_btn);
+                                soundButton.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.ic_volume_off_black_24dp,0,0,0);
                             }
                             break;
                         case "ff":
@@ -211,6 +214,7 @@ public class MainActivity extends AppCompatActivity {
                             alarmSatus = false;
                             nb.hide();
                             soundButton.setText(R.string.alarm_btn);
+                            soundButton.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.ic_volume_up_black_24dp,0,0,0);
                             break;
                         case "nt":
                             mNotificationManager.notify(512, mBuilder.build());
