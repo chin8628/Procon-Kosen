@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">Rescuer App</string>
+    <string name="ssid_label">SSID</string>
+
+    <!-- button main page -->
+    <string name="generate_btn">Generate SSID</string>
+    <string name="copy_btn">Copy SSID</string>
+    <string name="hotspot_btn">Goto Hotspot Setting</string>
+
+    <string name="command_label">Command</string>
+    <string-array name="command_spinner">
+        <item>ON</item>
+        <item>OFF</item>
+    </string-array>
+
+    <string name="age_label">Age</string>
+    <string-array name="age_spinner">
+        <item>All</item>
+        <item>Children</item>
+        <item>Adult</item>
+        <item>Elder</item>
+    </string-array>
+
+    <string name="blood_label">Blood group</string>
+    <string-array name="blood_spinner">
+        <item>All</item>
+        <item>O</item>
+        <item>A</item>
+        <item>B</item>
+        <item>AB</item>
+    </string-array>
 </resources>
