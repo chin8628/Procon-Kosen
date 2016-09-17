@@ -3,7 +3,7 @@
     <!-- Main page -->
     <string name="app_name">IamHere</string>
     <string name="name_label">Name</string>
-    <string name="phone_label">Sibling Phone</string>
+    <string name="phone_label">Emergency Contact</string>
     <string name="blood_label">Blood Group</string>
     <string name="birthday_label">Birthday</string>
     <string name="button_edit_profile">Edit Profile</string>
@@ -15,7 +15,7 @@
     <!-- Edit profile page -->
     <string name="edit_name">Name</string>
     <string name="edit_birthday">Birthday</string>
-    <string name="edit_sibling">Sibling number phone</string>
+    <string name="edit_sibling">Emergency Contact</string>
     <string name="edit_blood">Blood Group</string>
 
     <!-- Universal button -->
