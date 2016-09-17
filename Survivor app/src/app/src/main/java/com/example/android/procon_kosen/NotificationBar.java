@@ -24,7 +24,7 @@ public class NotificationBar {
     }
     
     public void hide() {
-        mViewNotificationBar.setVisibility(View.INVISIBLE);
+        mViewNotificationBar.setVisibility(View.GONE);
     }
 
     public void setText(String msg) {
