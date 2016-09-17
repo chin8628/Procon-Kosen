@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // Get age from spinner then convert to preHash
                 age = mAge_spinner.getSelectedItem().toString().toUpperCase();
-                age = (String) commandMap.get(age);
+                age = (String) ageMap.get(age);
 
                 // Define blood to get preHash command easier
                 HashMap bloodMap = new HashMap<>();
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // Get blood from spinner then convert to preHash
                 blood = mBlood_spinner.getSelectedItem().toString().toUpperCase();
-                blood = (String) commandMap.get(blood);
+                blood = (String) bloodMap.get(blood);
 
                 Calendar c = Calendar.getInstance();
                 SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
