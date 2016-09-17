@@ -114,7 +114,7 @@ public class WiFiScanner extends Service {
         {
             temp = "ch";
         }
-        else if (age <= 50)
+        else if (age <= 60)
         {
             temp = "ad";
         }

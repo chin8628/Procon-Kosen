@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else {
                     mp.pause();
-                    mNotificationManager.cancel(512);
+                    //mNotificationManager.cancel(512);
                     alarmSatus = false;
                     nb.hide();
                     soundButton.setText(R.string.alarm_btn);
@@ -210,7 +210,7 @@ public class MainActivity extends AppCompatActivity {
                             break;
                         case "ff":
                             mp.pause();
-                            mNotificationManager.cancel(512);
+                            //mNotificationManager.cancel(512);
                             alarmSatus = false;
                             nb.hide();
                             soundButton.setText(R.string.alarm_btn);
