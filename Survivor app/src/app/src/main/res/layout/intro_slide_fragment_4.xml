@@ -6,7 +6,7 @@
     android:fillViewport="true"
     android:layout_alignParentTop="true"
     android:layout_above="@+id/btnGroup"
-    android:background="@color/colorIntro"
+    android:background="@color/colorIntro4"
     android:paddingBottom="10dp">
 
     <LinearLayout
@@ -23,7 +23,7 @@
         <ImageView
             android:layout_width="250dp"
             android:layout_height="250dp"
-            android:src="@mipmap/intro5"
+            android:src="@mipmap/intro4"
             android:layout_gravity="center_horizontal" />
 
         <TextView

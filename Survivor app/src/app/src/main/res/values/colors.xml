@@ -5,10 +5,10 @@
     <color name="colorAccent">#FFA726</color>
 
     <!-- Intro color page -->
-    <color name="colorIntro">#FFA726</color>
     <color name="colorIntro1">#374f69</color>
     <color name="colorIntro2">#65a630</color>
     <color name="colorIntro3">#6a80bf</color>
+    <color name="colorIntro4">#66b8e7</color>
     <color name="colorIntro5">#f26b53</color>
 
     <!-- Main page -->
