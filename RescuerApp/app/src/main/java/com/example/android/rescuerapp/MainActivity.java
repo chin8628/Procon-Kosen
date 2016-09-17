@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.net.wifi.WifiManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -102,6 +103,8 @@ public class MainActivity extends AppCompatActivity {
                 String formattedDate = df.format(c.getTime());
                 mSSIDName = Integer.toString((formattedDate + command + age + blood).hashCode());
                 mSsid.setText(mSSIDName);
+
+                Log.v("preHash", formattedDate + command + age + blood);
             }
         });
 

@@ -1,31 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:paddingBottom="20dp"
-    android:paddingTop="55dp"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
-    android:background="@color/colorIntro3">
+    android:id="@+id/scrollContentProfile"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:layout_alignParentTop="true"
+    android:layout_above="@+id/btnGroup"
+    android:background="@color/colorIntro3"
+    android:paddingBottom="10dp">
 
-    <ImageView
-        android:layout_width="230dp"
-        android:layout_height="230dp"
-        android:src="@mipmap/intro3"
-        android:layout_gravity="center_horizontal" />
-
-    <TextView
-        style="?android:textAppearanceMedium"
-        android:layout_marginTop="20dp"
-        android:padding="15dp"
-        android:gravity="center_horizontal"
-        android:textSize="20sp"
-        android:lineSpacingMultiplier="1.2"
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/intro3" />
+        android:gravity="center_horizontal"
+        android:paddingBottom="20dp"
+        android:paddingTop="40dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
 
-</LinearLayout>
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@mipmap/intro3"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            style="?android:textAppearanceMedium"
+            android:layout_marginTop="20dp"
+            android:padding="15dp"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/intro3"
+            android:textColor="@color/abc_primary_text_material_dark" />
+
+    </LinearLayout>
+
+</ScrollView>
