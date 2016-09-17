@@ -14,13 +14,14 @@ import android.util.Log;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 public class WiFiScanner extends Service {
 
     private WifiManager mainWifi;
-    private Handler handler = new Handler();
     private Boolean mainStatus = false;
     private String temp = "ch";
     private String keyComand[] = {"on", "ff", "nt", "nf"};
@@ -29,7 +30,7 @@ public class WiFiScanner extends Service {
     private String ageGroup = "Null";
     private Context context;
     private ProfileHelper ph;
-
+    private Handler handler;
     private BroadcastReceiver mStausReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -60,34 +61,26 @@ public class WiFiScanner extends Service {
         WifiReceiver mWifi = new WifiReceiver();
         registerReceiver(mWifi, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
         registerReceiver(mStausReceiver, new IntentFilter("mainBroadcaster"));
+        handler = new Handler();
         String keyAge[] = {"aa", "ch"};
         String keyBlood[] = {"AA", ph.getBlood()};
 
+        handler.post(runnableCode);
 
-        //Begin core loop
-        doInback();
     }
 
 
     class WifiReceiver extends BroadcastReceiver {
-        private String ssidKey = "kitsuchart";
 
         public void onReceive(Context c, Intent intent) {
-            boolean detection = false;
             List<ScanResult> wifiList;
             wifiList = mainWifi.getScanResults();
-
-
-
+            List<String> ssidList = new ArrayList<String>();
             for (int i = 0; i < wifiList.size(); i++) {
-
-                if (SsidValidation(wifiList.get(i).SSID)) {
-                    detection = true;
-                    break;
-                }
+                ssidList.add(wifiList.get(i).SSID);
             }
 
-            if (detection) {
+            if (SsidValidation(ssidList)) {
                     Intent j = new Intent("command recived");
                     j.putExtra("comamnds", commands);
                     j.putExtra("target", target);
@@ -98,66 +91,63 @@ public class WiFiScanner extends Service {
                         startActivity(k);
                 }
             }
+            wifiList.clear();
+            ssidList.clear();
+            handler.postDelayed(runnableCode, 30000);
         }
 
-        private boolean SsidValidation(String ssid) {
+    private boolean SsidValidation(List<String> ssidList) {
 
-            //Check if ssid is valid
-            int age = 0;
-            Calendar c = Calendar.getInstance();
-            SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
-            String formattedDate = df.format(c.getTime());
-            String keyBlood[] = {"AA", ph.getBlood()};
-            try {
-                age = ph.getAge();
-            }
-            catch (ParseException e){
-                // Nothing do anything
-            }
-            if(age <= 15)
+        //Check if ssid is valid
+        int age = 0;
+        Calendar c = Calendar.getInstance();
+        SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH);
+        String formattedDate = df.format(c.getTime());
+        String keyBlood[] = {"AA", ph.getBlood()};
+        try {
+            age = ph.getAge();
+        }
+        catch (ParseException e){
+            // Nothing do anything
+        }
+        if(age <= 15)
+        {
+            temp = "ch";
+        }
+        else if (age <= 50)
+        {
+            temp = "ad";
+        }
+        else
+        {
+            temp = "ed";
+        }
+        String keyAge[] = {"aa", temp};
+        int i, j ,k;
+        for(i=0;i<4;i++)
+        {
+            for(j=0;j<2;j++)
             {
-                temp = "ch";
-            }
-            else if (age <= 50)
-            {
-                temp = "ad";
-            }
-            else
-            {
-                temp = "ed";
-            }
-            String keyAge[] = {"aa", temp};
-            int i, j ,k;
-            for(i=0;i<4;i++)
-            {
-                for(j=0;j<2;j++)
+                for(k=0;k<2;k++)
                 {
-                    for(k=0;k<2;k++)
+                    if(ssidList.contains(Integer.toString((formattedDate+keyComand[i]+keyAge[j]+keyBlood[k]).hashCode())))
                     {
-                        if(ssid.equals(Integer.toString((formattedDate+keyComand[i]+keyAge[j]+keyBlood[k]).hashCode())))
-                        {
-                            commands = keyComand[i];
-                            ageGroup = keyAge[j];
-                            target = keyBlood[k];
-                            return true;
-
-                        }
+                        commands = keyComand[i];
+                        ageGroup = keyAge[j];
+                        target = keyBlood[k];
+                        return true;
                     }
                 }
             }
-            return false;
-
         }
+        return false;
     }
+}
 
-    public void doInback() {
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                mainWifi.startScan();
-                doInback();
-            }
-        }, 30000);
-    }
-
+    private Runnable runnableCode = new Runnable() {
+        @Override
+        public void run() {
+            mainWifi.startScan();
+        }
+    };
 }

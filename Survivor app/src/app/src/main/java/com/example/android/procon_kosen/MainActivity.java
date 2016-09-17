@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                     mp.pause();
                     mNotificationManager.cancel(512);
                     alarmSatus = false;
-                    //nb.hide();
+                    nb.hide();
                     soundButton.setText(R.string.alarm_btn);
                     soundButton.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.ic_volume_up_black_24dp,0,0,0);
                 }

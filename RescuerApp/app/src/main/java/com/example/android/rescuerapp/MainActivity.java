@@ -16,6 +16,7 @@ import android.widget.Toast;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 import java.util.StringTokenizer;
 
@@ -97,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                 blood = (String) bloodMap.get(blood);
 
                 Calendar c = Calendar.getInstance();
-                SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
+                SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH);
                 String formattedDate = df.format(c.getTime());
                 mSSIDName = Integer.toString((formattedDate + command + age + blood).hashCode());
                 mSsid.setText(mSSIDName);
