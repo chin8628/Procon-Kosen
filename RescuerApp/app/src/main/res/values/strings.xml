@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Rescuer App</string>
+    <string name="app_name">IH Rescuer</string>
     <string name="ssid_label">SSID</string>
 
     <!-- button main page -->
