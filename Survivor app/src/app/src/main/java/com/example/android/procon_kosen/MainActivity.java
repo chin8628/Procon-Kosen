@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
         FirstTimeVisitClass visit = new FirstTimeVisitClass(this);
         if (!visit.getVisited()) {
-            visit.setVisited();
             startActivity(new Intent(MainActivity.this, IntroSlide.class));
         }
 

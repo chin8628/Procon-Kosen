@@ -37,12 +37,6 @@
             android:layout_height="wrap_content"
             android:text="@string/intro5"
             android:textColor="@color/abc_primary_text_material_dark" />
-    
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/intro_button_edit_profile"
-            android:id="@+id/edit_profile_visit_1st" />
 
     </LinearLayout>
 

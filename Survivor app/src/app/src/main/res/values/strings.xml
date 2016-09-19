@@ -38,6 +38,9 @@
     <string name="intro4">It\'s automatic, You don\'t have to do anything.</string>
     <string name="intro5">Just please insert your personal information to make rescuing easier.</string>
     <string name="intro_button_edit_profile">Edit Profile</string>
+    <string name="next">NEXT</string>
+    <string name="back">BACK</string>
+    <string name="start">GOT IT</string>
 
     <!-- Notification -->
     <string name="notify_detected">IamHere found Rescuer-Signal.</string>

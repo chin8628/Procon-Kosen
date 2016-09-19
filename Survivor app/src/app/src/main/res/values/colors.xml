@@ -15,4 +15,10 @@
     <color name="colorBtnGroup">#a82112</color>
     <color name="colorNotification">#E65100</color>
 
+    <!-- Point navigate -->
+    <color name="colorActive">#FFA726</color>
+    <color name="colorInActive">#EEE</color>
+
+    <color name="colorTextValidate">#F38960</color>
+
 </resources>
