@@ -69,7 +69,6 @@ public class IntroSlide extends FragmentActivity {
             @Override
             public void onClick(View v) {
                 int current = mPager.getCurrentItem() - 1;
-                Log.v("curr", Integer.toString(current));
                 if (current >= -1) {
                     // move to previous screen
                     mPager.setCurrentItem(current);
