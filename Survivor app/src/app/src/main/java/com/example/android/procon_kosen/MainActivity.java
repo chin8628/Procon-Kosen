@@ -1,49 +1,41 @@
 package com.example.android.procon_kosen;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.BitmapFactory;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.media.Ringtone;
-import android.media.RingtoneManager;
-import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button editBtn;
     private Button soundButton;
     private AudioManager am;
-    private Uri notification;
-    private Ringtone r;
     private SharedPreferences sharedpreferences;
     private NotificationManager mNotificationManager;
     private NotificationCompat.Builder mBuilder;
     private MediaPlayer mp;
     private NotificationBar nb;
-    private boolean waiting = true;
-
-    // TODO: Feem edit this typo plz.
-    private boolean alarmSatus = false;
+    private static boolean alarmStatus = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        alarmSatus = false;
 
         FirstTimeVisitClass visit = new FirstTimeVisitClass(this);
         if (!visit.getVisited()) {
@@ -55,14 +47,20 @@ public class MainActivity extends AppCompatActivity {
         //Request Location and Boot permission if not already granted
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)
         {
-            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1001);
-            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.RECEIVE_BOOT_COMPLETED}, 1002);
+            new AlertDialog.Builder(this)
+                    .setTitle("Request Permission")
+                    .setMessage("The application will request location access in order to locate your phone.")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1001);
+                            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.RECEIVE_BOOT_COMPLETED}, 1002);
+                        }
+                    })
+                    .setIcon(android.R.drawable.ic_dialog_alert).show();
         }
 
         //Initialize audio object
         am = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-        notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
-        r = RingtoneManager.getRingtone(getApplicationContext(), notification);
         mp = MediaPlayer.create(MainActivity.this, R.raw.loudalarm);
         mp.setLooping(true);
         nb = new NotificationBar(this);
@@ -89,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         sibling1.setText(sharedpreferences.getString("sibling1", ""));
         sibling2.setText(sharedpreferences.getString("sibling2", ""));
 
-        editBtn = (Button) findViewById(R.id.edit_btn);
+        Button editBtn = (Button) findViewById(R.id.edit_btn);
         editBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,11 +100,11 @@ public class MainActivity extends AppCompatActivity {
         soundButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!alarmSatus) {
+                if (!mp.isPlaying()) {
                     am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), am.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
                     mp.start();
                     mNotificationManager.notify(512, mBuilder.build());
-                    alarmSatus = true;
+                    alarmStatus = true;
                     //nb.show();
                     soundButton.setText(R.string.silence_btn);
                     soundButton.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.ic_volume_off_black_24dp,0,0,0);
@@ -114,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     mp.pause();
                     //mNotificationManager.cancel(512);
-                    alarmSatus = false;
+                    alarmStatus = false;
                     nb.hide();
                     soundButton.setText(R.string.alarm_btn);
                     soundButton.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.ic_volume_up_black_24dp,0,0,0);
@@ -126,9 +124,8 @@ public class MainActivity extends AppCompatActivity {
         sb.append("You have been detected.\n");
         sb.append("Personal Details\n");
         sb.append("Blood Type ").append(sharedpreferences.getString("blood", "")).append("\n");
-        sb.append("Contact :");
+        sb.append("Contact: ");
         sb.append(sharedpreferences.getString("sibling1", ""));
-        sb.append(" ");
         sb.append(sharedpreferences.getString("sibling2", ""));
 
         //Build notification
@@ -187,8 +184,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onReceive(Context context, Intent intent) {
             // Get extra data included in the Intent
-            String mCommand = null;
-            String mtarget = null;
+            String mCommand;
+            String mtarget;
             mCommand= intent.getStringExtra("comamnds");
             mtarget= intent.getStringExtra("target");
             if(mCommand != null && mtarget != null )
@@ -197,20 +194,20 @@ public class MainActivity extends AppCompatActivity {
                 {
                     switch (mCommand) {
                         case "on":
-                            if (!alarmSatus) {
+                            if(!mp.isPlaying())
+                            {
                                 am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), am.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
                                 mp.start();
                                 mNotificationManager.notify(512, mBuilder.build());
-                                alarmSatus = true;
+                                alarmStatus = true;
                                 nb.show();
                                 soundButton.setText(R.string.silence_btn);
                                 soundButton.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.ic_volume_off_black_24dp,0,0,0);
                             }
-                            break;
+                                break;
                         case "ff":
                             mp.pause();
-                            //mNotificationManager.cancel(512);
-                            alarmSatus = false;
+                            alarmStatus = false;
                             nb.hide();
                             soundButton.setText(R.string.alarm_btn);
                             soundButton.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.ic_volume_up_black_24dp,0,0,0);
@@ -228,5 +225,4 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
-
 }
