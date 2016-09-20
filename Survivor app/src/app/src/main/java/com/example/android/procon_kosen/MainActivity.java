@@ -10,7 +10,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.graphics.BitmapFactory;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.support.v4.app.ActivityCompat;
@@ -31,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
     private NotificationCompat.Builder mBuilder;
     private MediaPlayer mp;
     private NotificationBar nb;
-    private static boolean alarmStatus = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,7 +102,6 @@ public class MainActivity extends AppCompatActivity {
                     am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), am.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
                     mp.start();
                     mNotificationManager.notify(512, mBuilder.build());
-                    alarmStatus = true;
                     //nb.show();
                     soundButton.setText(R.string.silence_btn);
                     soundButton.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.ic_volume_off_black_24dp,0,0,0);
@@ -112,7 +109,6 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     mp.pause();
                     //mNotificationManager.cancel(512);
-                    alarmStatus = false;
                     nb.hide();
                     soundButton.setText(R.string.alarm_btn);
                     soundButton.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.ic_volume_up_black_24dp,0,0,0);
@@ -199,7 +195,6 @@ public class MainActivity extends AppCompatActivity {
                                 am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), am.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
                                 mp.start();
                                 mNotificationManager.notify(512, mBuilder.build());
-                                alarmStatus = true;
                                 nb.show();
                                 soundButton.setText(R.string.silence_btn);
                                 soundButton.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.ic_volume_off_black_24dp,0,0,0);
@@ -207,7 +202,6 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                         case "ff":
                             mp.pause();
-                            alarmStatus = false;
                             nb.hide();
                             soundButton.setText(R.string.alarm_btn);
                             soundButton.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.ic_volume_up_black_24dp,0,0,0);
