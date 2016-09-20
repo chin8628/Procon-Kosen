@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.BitmapFactory;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.support.v4.app.ActivityCompat;
@@ -123,9 +124,8 @@ public class MainActivity extends AppCompatActivity {
         sb.append("You have been detected.\n");
         sb.append("Personal Details\n");
         sb.append("Blood Type ").append(sharedpreferences.getString("blood", "")).append("\n");
-        sb.append("Contact :");
+        sb.append("Contact: ");
         sb.append(sharedpreferences.getString("sibling1", ""));
-        sb.append(" ");
         sb.append(sharedpreferences.getString("sibling2", ""));
 
         //Build notification
