@@ -24,6 +24,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/apptheme_textfield_default_holo_light"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/edit_name"
@@ -38,6 +39,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/apptheme_textfield_default_holo_light"
             android:focusable="false"
             android:id="@+id/edit_birthday"
             android:onClick="showDatePickerDialog"
@@ -65,6 +67,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/apptheme_textfield_default_holo_light"
             android:inputType="phone"
             android:ems="10"
             android:id="@+id/edit_sibling_phone1" />
@@ -72,6 +75,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/apptheme_textfield_default_holo_light"
             android:id="@+id/edit_sibling_phone2"
             android:ems="10"
             android:layout_marginBottom="10dp"

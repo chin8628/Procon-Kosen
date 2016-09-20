@@ -17,6 +17,7 @@
     <string name="edit_birthday">Birthday</string>
     <string name="edit_sibling">Emergency Contact</string>
     <string name="edit_blood">Blood Group</string>
+    <string name="alert_empty_field">All fields are required.</string>
 
     <!-- Universal button -->
     <string name="save_btn">Save</string>

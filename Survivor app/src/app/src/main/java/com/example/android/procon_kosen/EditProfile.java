@@ -10,11 +10,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.Arrays;
 
@@ -23,6 +25,9 @@ public class EditProfile extends AppCompatActivity {
     private Button mSaveBtn, mCancleBtn;
     private EditText mName, mSibling1, mSibling2, mBirthday;
     private Spinner mBlood;
+
+    // Check entire EditText have some is empty
+    private boolean isSomeEditTextEmpty;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,18 +68,22 @@ public class EditProfile extends AppCompatActivity {
         mSaveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedpreferences = getBaseContext().getSharedPreferences("contentProfile", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedpreferences.edit();
+                if (isSomeEditTextEmpty) {
+                    Toast.makeText(getApplicationContext(), getString(R.string.alert_empty_field), Toast.LENGTH_SHORT).show();
+                } else {
+                    SharedPreferences sharedpreferences = getBaseContext().getSharedPreferences("contentProfile", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedpreferences.edit();
 
-                editor.putString("name", mName.getText().toString());
-                editor.putString("blood", mBlood.getSelectedItem().toString());
-                editor.putString("sibling1", mSibling1.getText().toString());
-                editor.putString("sibling2", mSibling2.getText().toString());
-                editor.putString("birthday", mBirthday.getText().toString());
-                editor.apply();
+                    editor.putString("name", mName.getText().toString());
+                    editor.putString("blood", mBlood.getSelectedItem().toString());
+                    editor.putString("sibling1", mSibling1.getText().toString());
+                    editor.putString("sibling2", mSibling2.getText().toString());
+                    editor.putString("birthday", mBirthday.getText().toString());
+                    editor.apply();
 
-                Intent i = new Intent(EditProfile.this, MainActivity.class);
-                startActivity(i);
+                    Intent i = new Intent(EditProfile.this, MainActivity.class);
+                    startActivity(i);
+                }
             }
         });
 
@@ -86,6 +95,11 @@ public class EditProfile extends AppCompatActivity {
             }
         });
 
+        mName.addTextChangedListener(textValidate);
+        mBirthday.addTextChangedListener(textValidate);
+        mSibling1.addTextChangedListener(textValidate);
+        mSibling2.addTextChangedListener(textValidate);
+
     }
 
     public void showDatePickerDialog(View v) {
@@ -94,51 +108,26 @@ public class EditProfile extends AppCompatActivity {
         dialog.show(getSupportFragmentManager(), "DialogDate");
     }
 
-    private final TextWatcher TextValidate = new TextWatcher() {
+    public void highLightEmptyEditText() {
+        EditText[] textEditView = {mName, mBirthday, mSibling1, mSibling2};
+        isSomeEditTextEmpty = false;
+        for(EditText e:textEditView) {
+            if (e.getText().toString().isEmpty()) {
+                isSomeEditTextEmpty = true;
+                e.setBackgroundResource(R.drawable.apptheme_textfield_activated_holo_light);
+            } else {
+                e.setBackgroundResource(R.drawable.apptheme_textfield_default_holo_light);
+            }
+        }
+    }
+
+    private final TextWatcher textValidate = new TextWatcher() {
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         public void afterTextChanged(Editable s) {
-            String[] textEditView = {   mName.getText().toString(),
-                                        mBlood.getSelectedItem().toString(),
-                                        mBirthday.getText().toString(),
-                                        mSibling1.getText().toString(),
-                                        mSibling2.getText().toString()
-                                    };
-
-            int color = ContextCompat.getColor(getBaseContext(), R.color.colorTextValidate);
-
-            if (mName.getText().toString().isEmpty()) {
-                mName.setBackgroundColor(color);
-            } else {
-                mName.setBackgroundColor(0);
-            }
-
-            if (mBlood.getSelectedItem().toString().isEmpty()) {
-                mBlood.setBackgroundColor(color);
-            } else {
-                mBlood.setBackgroundColor(0);
-            }
-
-            if (mBirthday.getText().toString().isEmpty()) {
-                mBirthday.setBackgroundColor(color);
-            } else {
-                mBirthday.setBackgroundColor(0);
-            }
-
-            if (mSibling1.getText().toString().isEmpty()) {
-                mSibling1.setBackgroundColor(color);
-            } else {
-                mSibling1.setBackgroundColor(0);
-            }
-
-            if (mSibling2.getText().toString().isEmpty()) {
-                mSibling2.setBackgroundColor(color);
-            } else {
-                mSibling2.setBackgroundColor(0);
-            }
-
+            highLightEmptyEditText();
         }
     };
 
