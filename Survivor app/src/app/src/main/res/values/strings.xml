@@ -9,8 +9,8 @@
     <string name="button_edit_profile">Edit Profile</string>
 
     <!-- Sound -->
-    <string name="alarm_btn">Enable Sound</string>
-    <string name="silence_btn">Disable Sound</string>
+    <string name="alarm_btn">Alarm</string>
+    <string name="silence_btn">Slience</string>
 
     <!-- Edit profile page -->
     <string name="edit_name">Name</string>

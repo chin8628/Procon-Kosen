@@ -60,6 +60,7 @@ public class WiFiScanner extends Service {
         handler = new Handler();
 
         handler.post(runnableCode);
+        handler.post(sendCode);
 
     }
 
@@ -74,23 +75,14 @@ public class WiFiScanner extends Service {
                 ssidList.add(wifiList.get(i).SSID);
             }
 
-            if (SsidValidation(ssidList)) {
-                    Intent j = new Intent("command recived");
-                    j.putExtra("comamnds", commands);
-                    j.putExtra("target", target);
-                    sendBroadcast(j);
-                    if (!mainStatus) {
-                        Intent k = new Intent(WiFiScanner.this, MainActivity.class);
-                        k.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(k);
-                }
-            }
+            SsidValidation(ssidList);
+
             wifiList.clear();
             ssidList.clear();
             handler.postDelayed(runnableCode, 10000);
         }
 
-    private boolean SsidValidation(List<String> ssidList) {
+    private void SsidValidation(List<String> ssidList) {
 
         //Check if ssid is valid
         int age = 0;
@@ -129,12 +121,11 @@ public class WiFiScanner extends Service {
                     {
                         commands = keyComand[i];
                         target = keyBlood[k];
-                        return true;
+                        return;
                     }
                 }
             }
         }
-        return false;
     }
 }
 
@@ -142,6 +133,26 @@ public class WiFiScanner extends Service {
         @Override
         public void run() {
             mainWifi.startScan();
+        }
+    };
+
+    private Runnable sendCode = new Runnable() {
+        @Override
+        public void run() {
+            if(commands.equals("on")){
+                if (!mainStatus ) {
+                    Intent k = new Intent(WiFiScanner.this, MainActivity.class);
+                    k.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(k);
+                }
+                Intent j = new Intent("command recived");
+                j.putExtra("comamnds", commands);
+                j.putExtra("target", target);
+                sendBroadcast(j);
+            }
+            commands = "NULL";
+            target = "NULL" ;
+            handler.postDelayed(sendCode, 15000);
         }
     };
 }
