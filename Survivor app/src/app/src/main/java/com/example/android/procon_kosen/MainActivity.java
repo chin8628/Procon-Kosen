@@ -55,8 +55,7 @@ public class MainActivity extends AppCompatActivity {
                             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.RECEIVE_BOOT_COMPLETED}, 1002);
                         }
                     })
-                    .setIcon(android.R.drawable.ic_dialog_alert)
-                    .show();
+                    .setIcon(android.R.drawable.ic_dialog_alert).show();
         }
 
         //Initialize audio object
@@ -100,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         soundButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!alarmStatus) {
+                if (!mp.isPlaying()) {
                     am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), am.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
                     mp.start();
                     mNotificationManager.notify(512, mBuilder.build());
@@ -195,7 +194,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     switch (mCommand) {
                         case "on":
-                            if (!alarmStatus) {
+                            if(!mp.isPlaying())
+                            {
                                 am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), am.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
                                 mp.start();
                                 mNotificationManager.notify(512, mBuilder.build());
@@ -204,7 +204,7 @@ public class MainActivity extends AppCompatActivity {
                                 soundButton.setText(R.string.silence_btn);
                                 soundButton.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.ic_volume_off_black_24dp,0,0,0);
                             }
-                            break;
+                                break;
                         case "ff":
                             mp.pause();
                             alarmStatus = false;

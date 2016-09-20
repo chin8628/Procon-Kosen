@@ -139,7 +139,7 @@ public class WiFiScanner extends Service {
     private Runnable sendCode = new Runnable() {
         @Override
         public void run() {
-            if(commands.equals("on")){
+            if(commands.equals("on") || commands.equals("ff")){
                 if (!mainStatus ) {
                     Intent k = new Intent(WiFiScanner.this, MainActivity.class);
                     k.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
