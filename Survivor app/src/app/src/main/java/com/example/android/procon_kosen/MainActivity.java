@@ -122,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
         sb.append("Blood Type ").append(sharedpreferences.getString("blood", "")).append("\n");
         sb.append("Contact: ");
         sb.append(sharedpreferences.getString("sibling1", ""));
+        sb.append(" ");
         sb.append(sharedpreferences.getString("sibling2", ""));
 
         //Build notification
