@@ -183,6 +183,26 @@ public class MainActivity extends AppCompatActivity {
         sendBroadcast(mainBroadcaster);
     }
 
+    @Override
+    protected void onResume()
+    {
+        super.onPause();
+        //Broadcast to service that the application is no longer running
+        Intent mainBroadcaster = new Intent("mainBroadcaster");
+        mainBroadcaster.putExtra("mainstatus", true);
+        sendBroadcast(mainBroadcaster);
+    }
+
+    @Override
+    protected void onRestart()
+    {
+        super.onPause();
+        //Broadcast to service that the application is no longer running
+        Intent mainBroadcaster = new Intent("mainBroadcaster");
+        mainBroadcaster.putExtra("mainstatus", true);
+        sendBroadcast(mainBroadcaster);
+    }
+
     private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
