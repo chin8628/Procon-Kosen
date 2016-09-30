@@ -119,7 +119,8 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder sb = new StringBuilder();
         sb.append("You have been detected.\n");
         sb.append("Personal Details\n");
-        sb.append("Blood Type ").append(sharedpreferences.getString("blood", "")).append("\n");
+        sb.append("Name: ").append(sharedpreferences.getString("name", "")).append("\n");
+        sb.append("Blood Type: ").append(sharedpreferences.getString("blood", "")).append("\n");
         sb.append("Contact: ");
         sb.append(sharedpreferences.getString("sibling1", ""));
         sb.append(" ");
