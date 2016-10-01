@@ -12,6 +12,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -30,14 +31,18 @@ public class MainActivity extends AppCompatActivity {
     private NotificationCompat.Builder mBuilder;
     private static MediaPlayer mp;
     private NotificationBar nb;
-    private boolean soundActive;
+    private boolean soundActive = false;
+    private Handler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        soundActive = false;
+        //Start Background Wifi Service
+        Intent service = new Intent(this, WiFiScanner.class);
+        startService(service);
 
+        handler = new Handler();
         FirstTimeVisitClass visit = new FirstTimeVisitClass(this);
         if (!visit.getVisited()) {
             startActivity(new Intent(MainActivity.this, IntroSlide.class));
@@ -58,21 +63,13 @@ public class MainActivity extends AppCompatActivity {
                         }
                     })
                     .setIcon(android.R.drawable.ic_dialog_alert).show();
+
+            handler.post(runnableCode);
         }
 
         //Initialize audio object
-        am = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-        mp = MediaPlayer.create(MainActivity.this, R.raw.loudalarm);
-        mp.setLooping(true);
         nb = new NotificationBar(this);
-        //Start Background Wifi Service
-        Intent service = new Intent(this, WiFiScanner.class);
-        startService(service);
-
-        //Broadcast to service that the application is running
-        Intent mainBroadcaster = new Intent("mainBroadcaster");
-        mainBroadcaster.putExtra("mainstatus", true);
-        sendBroadcast(mainBroadcaster);
+        am = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
         //Initialize Ui object
         TextView name = (TextView) findViewById(R.id.name);
@@ -102,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!soundActive) {
+                    mp = MediaPlayer.create(MainActivity.this, R.raw.loudalarm);
+                    mp.setLooping(true);
                     soundActive = true;
                     am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), am.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
                     mp.start();
@@ -112,11 +111,13 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else {
                     soundActive = false;
-                    mp.pause();
+                    mp.stop();
                     //mNotificationManager.cancel(512);
                     nb.hide();
                     soundButton.setText(R.string.alarm_btn);
                     soundButton.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.ic_volume_up_black_24dp,0,0,0);
+                    Intent j = new Intent("slience b");
+                    sendBroadcast(j);
                 }
             }
         });
@@ -150,6 +151,12 @@ public class MainActivity extends AppCompatActivity {
         //register reliever from service
         registerReceiver(mMessageReceiver, new IntentFilter("command recived"));
 
+        //Broadcast to service that the application is running
+        Intent mainBroadcaster = new Intent("mainBroadcaster");
+        mainBroadcaster.putExtra("mainstatus", true);
+        sendBroadcast(mainBroadcaster);
+
+        handler.postDelayed(runnableCode, 10000);
 
     }
 
@@ -168,14 +175,21 @@ public class MainActivity extends AppCompatActivity {
         moveTaskToBack(true);
     }
 
+
     @Override
-    protected void onStop()
+    protected void onResume()
     {
-        super.onStop();
+        super.onResume();
         //Broadcast to service that the application is no longer running
-        Intent mainBroadcaster = new Intent("mainBroadcaster");
-        mainBroadcaster.putExtra("mainstatus", false);
-        sendBroadcast(mainBroadcaster);
+        handler.post(runnableCode);
+    }
+
+    @Override
+    protected void onRestart()
+    {
+        super.onRestart();
+        //Broadcast to service that the application is no longer running
+        handler.post(runnableCode);
     }
 
     @Override
@@ -183,29 +197,15 @@ public class MainActivity extends AppCompatActivity {
     {
         super.onPause();
         //Broadcast to service that the application is no longer running
-        Intent mainBroadcaster = new Intent("mainBroadcaster");
-        mainBroadcaster.putExtra("mainstatus", false);
-        sendBroadcast(mainBroadcaster);
+        handler.post(runnableCode);
     }
 
     @Override
-    protected void onResume()
+    protected void onStop()
     {
-        super.onPause();
+        super.onStop();
         //Broadcast to service that the application is no longer running
-        Intent mainBroadcaster = new Intent("mainBroadcaster");
-        mainBroadcaster.putExtra("mainstatus", true);
-        sendBroadcast(mainBroadcaster);
-    }
-
-    @Override
-    protected void onRestart()
-    {
-        super.onPause();
-        //Broadcast to service that the application is no longer running
-        Intent mainBroadcaster = new Intent("mainBroadcaster");
-        mainBroadcaster.putExtra("mainstatus", true);
-        sendBroadcast(mainBroadcaster);
+        handler.post(runnableCode);
     }
 
     private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
@@ -224,6 +224,8 @@ public class MainActivity extends AppCompatActivity {
                         case "on":
                             if(!soundActive)
                             {
+                                mp = MediaPlayer.create(MainActivity.this, R.raw.loudalarm);
+                                mp.setLooping(true);
                                 soundActive = true;
                                 am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), am.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
                                 mp.start();
@@ -235,7 +237,7 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                         case "ff":
                             soundActive = false;
-                            mp.pause();
+                            mp.stop();
                             nb.hide();
                             soundButton.setText(R.string.alarm_btn);
                             soundButton.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.ic_volume_up_black_24dp,0,0,0);
@@ -251,6 +253,14 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
+        }
+    };
+    private Runnable runnableCode = new Runnable() {
+        @Override
+        public void run() {
+            Intent mainBroadcaster = new Intent("mainBroadcaster");
+            mainBroadcaster.putExtra("mainstatus", true);
+            sendBroadcast(mainBroadcaster);
         }
     };
 }

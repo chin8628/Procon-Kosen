@@ -24,9 +24,9 @@ public class WiFiScanner extends Service {
     private String keyComand[] = {"on", "ff", "nt", "nf"};
     private String commands = "Null";
     private String target = "Null";
-    private Context context;
     private ProfileHelper ph;
     private Handler handler;
+    private boolean slience = false;
     private BroadcastReceiver mStausReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -34,6 +34,12 @@ public class WiFiScanner extends Service {
             mainStatus = intent.getBooleanExtra("mainstatus", false);
         }
 
+    };
+    private BroadcastReceiver  mSlienceReciver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            slience = true;
+        }
     };
 
     public WiFiScanner() {
@@ -57,6 +63,7 @@ public class WiFiScanner extends Service {
         WifiReceiver mWifi = new WifiReceiver();
         registerReceiver(mWifi, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
         registerReceiver(mStausReceiver, new IntentFilter("mainBroadcaster"));
+        registerReceiver(mSlienceReciver, new IntentFilter("slience b"));
         handler = new Handler();
 
         handler.post(runnableCode);
@@ -136,23 +143,31 @@ public class WiFiScanner extends Service {
         }
     };
 
+    private Runnable broadcastCode = new Runnable() {
+        @Override
+        public void run() {
+            Intent j = new Intent("command recived");
+            j.putExtra("comamnds", commands);
+            j.putExtra("target", target);
+            sendBroadcast(j);
+        }
+    };
+
     private Runnable sendCode = new Runnable() {
         @Override
         public void run() {
-            if(commands.equals("on") || commands.equals("ff")){
-                if (!mainStatus ) {
+            if((commands.equals("on") || commands.equals("ff")) && !slience){
+                if (!mainStatus) {
                     Intent k = new Intent(WiFiScanner.this, MainActivity.class);
                     k.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(k);
                 }
-                Intent j = new Intent("command recived");
-                j.putExtra("comamnds", commands);
-                j.putExtra("target", target);
-                sendBroadcast(j);
+                handler.postDelayed(broadcastCode, 3000);
             }
+            slience = false;
             commands = "NULL";
             target = "NULL" ;
-            handler.postDelayed(sendCode, 15000);
+            handler.postDelayed(sendCode, 7000);
         }
     };
 }
