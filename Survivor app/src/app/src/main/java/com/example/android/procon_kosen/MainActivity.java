@@ -28,12 +28,15 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences sharedpreferences;
     private NotificationManager mNotificationManager;
     private NotificationCompat.Builder mBuilder;
-    private MediaPlayer mp;
+    private static MediaPlayer mp;
     private NotificationBar nb;
+    private boolean soundActive;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        soundActive = false;
 
         FirstTimeVisitClass visit = new FirstTimeVisitClass(this);
         if (!visit.getVisited()) {
@@ -98,7 +101,8 @@ public class MainActivity extends AppCompatActivity {
         soundButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!mp.isPlaying()) {
+                if (!soundActive) {
+                    soundActive = true;
                     am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), am.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
                     mp.start();
                     mNotificationManager.notify(512, mBuilder.build());
@@ -107,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
                     soundButton.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.ic_volume_off_black_24dp,0,0,0);
                 }
                 else {
+                    soundActive = false;
                     mp.pause();
                     //mNotificationManager.cancel(512);
                     nb.hide();
@@ -217,8 +222,9 @@ public class MainActivity extends AppCompatActivity {
                 {
                     switch (mCommand) {
                         case "on":
-                            if(!mp.isPlaying())
+                            if(!soundActive)
                             {
+                                soundActive = true;
                                 am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), am.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
                                 mp.start();
                                 mNotificationManager.notify(512, mBuilder.build());
@@ -228,6 +234,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                                 break;
                         case "ff":
+                            soundActive = false;
                             mp.pause();
                             nb.hide();
                             soundButton.setText(R.string.alarm_btn);
