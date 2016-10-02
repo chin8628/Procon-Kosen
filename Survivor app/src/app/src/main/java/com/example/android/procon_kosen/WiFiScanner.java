@@ -167,7 +167,7 @@ public class WiFiScanner extends Service {
             slience = false;
             commands = "NULL";
             target = "NULL" ;
-            handler.postDelayed(sendCode, 7000);
+            handler.postDelayed(sendCode, 5000);
         }
     };
 }
