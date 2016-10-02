@@ -86,7 +86,7 @@ public class WiFiScanner extends Service {
 
             wifiList.clear();
             ssidList.clear();
-            handler.postDelayed(runnableCode, 10000);
+            handler.postDelayed(runnableCode, 5000);
         }
 
     private void SsidValidation(List<String> ssidList) {
