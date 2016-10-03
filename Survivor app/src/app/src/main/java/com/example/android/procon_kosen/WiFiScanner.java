@@ -10,6 +10,8 @@ import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.Handler;
 import android.os.IBinder;
+import android.util.Log;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -81,12 +83,11 @@ public class WiFiScanner extends Service {
             for (int i = 0; i < wifiList.size(); i++) {
                 ssidList.add(wifiList.get(i).SSID);
             }
-
+            Log.v("asd", ssidList.toString());
             SsidValidation(ssidList);
-
             wifiList.clear();
             ssidList.clear();
-            handler.postDelayed(runnableCode, 3000);
+            handler.postDelayed(runnableCode, 4500);
         }
 
     private void SsidValidation(List<String> ssidList) {
@@ -143,31 +144,26 @@ public class WiFiScanner extends Service {
         }
     };
 
-    private Runnable broadcastCode = new Runnable() {
-        @Override
-        public void run() {
-            Intent j = new Intent("command recived");
-            j.putExtra("comamnds", commands);
-            j.putExtra("target", target);
-            sendBroadcast(j);
-        }
-    };
-
     private Runnable sendCode = new Runnable() {
         @Override
         public void run() {
+
+            Log.v("asd", String.valueOf(mainStatus) + " " + commands);
             if((commands.equals("on") || commands.equals("ff")) && !slience){
                 if (!mainStatus) {
                     Intent k = new Intent(WiFiScanner.this, MainActivity.class);
                     k.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(k);
                 }
-                handler.postDelayed(broadcastCode, 3000);
+                Intent j = new Intent("command recived");
+                j.putExtra("comamnds", commands);
+                j.putExtra("target", target);
+                sendBroadcast(j);
             }
             slience = false;
             commands = "NULL";
             target = "NULL" ;
-            handler.postDelayed(sendCode, 3000);
+            handler.postDelayed(sendCode, 10000);
         }
     };
 }
