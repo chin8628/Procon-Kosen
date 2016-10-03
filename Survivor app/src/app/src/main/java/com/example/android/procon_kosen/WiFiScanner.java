@@ -10,8 +10,6 @@ import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.Handler;
 import android.os.IBinder;
-import android.util.Log;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -61,7 +59,7 @@ public class WiFiScanner extends Service {
         ph = new ProfileHelper(this);
 
         //Initalize objects
-        mainWifi = (WifiManager) getSystemService(WIFI_SERVICE);
+        mainWifi = (WifiManager) this.getSystemService(this.WIFI_SERVICE);
         WifiReceiver mWifi = new WifiReceiver();
         registerReceiver(mWifi, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
         registerReceiver(mStausReceiver, new IntentFilter("mainBroadcaster"));
@@ -83,7 +81,6 @@ public class WiFiScanner extends Service {
             for (int i = 0; i < wifiList.size(); i++) {
                 ssidList.add(wifiList.get(i).SSID);
             }
-            Log.v("asd", ssidList.toString());
             SsidValidation(ssidList);
             wifiList.clear();
             ssidList.clear();
@@ -147,8 +144,6 @@ public class WiFiScanner extends Service {
     private Runnable sendCode = new Runnable() {
         @Override
         public void run() {
-
-            Log.v("asd", String.valueOf(mainStatus) + " " + commands);
             if((commands.equals("on") || commands.equals("ff")) && !slience){
                 if (!mainStatus) {
                     Intent k = new Intent(WiFiScanner.this, MainActivity.class);

@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences sharedpreferences;
     private NotificationManager mNotificationManager;
     private NotificationCompat.Builder mBuilder;
-    private static MediaPlayer mp;
+    private MediaPlayer mp;
     private NotificationBar nb;
     private boolean soundActive = false;
     private Handler handler;
