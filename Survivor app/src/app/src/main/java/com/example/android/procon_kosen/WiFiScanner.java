@@ -86,7 +86,7 @@ public class WiFiScanner extends Service {
 
             wifiList.clear();
             ssidList.clear();
-            handler.postDelayed(runnableCode, 5000);
+            handler.postDelayed(runnableCode, 3000);
         }
 
     private void SsidValidation(List<String> ssidList) {
@@ -167,7 +167,7 @@ public class WiFiScanner extends Service {
             slience = false;
             commands = "NULL";
             target = "NULL" ;
-            handler.postDelayed(sendCode, 5000);
+            handler.postDelayed(sendCode, 3000);
         }
     };
 }

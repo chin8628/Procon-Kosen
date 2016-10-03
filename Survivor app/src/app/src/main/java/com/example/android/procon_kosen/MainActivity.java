@@ -164,6 +164,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy()
     {
         super.onDestroy();
+        Intent service = new Intent(this, WiFiScanner.class);
+        startService(service);
         //Broadcast to service that the application is no longer running
         Intent mainBroadcaster = new Intent("mainBroadcaster");
         mainBroadcaster.putExtra("mainstatus", false);
