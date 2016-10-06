@@ -10,6 +10,8 @@ import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.Handler;
 import android.os.IBinder;
+import android.util.Log;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -65,7 +67,6 @@ public class WiFiScanner extends Service {
         registerReceiver(mStausReceiver, new IntentFilter("mainBroadcaster"));
         registerReceiver(mSlienceReciver, new IntentFilter("slience b"));
         handler = new Handler();
-
         handler.post(runnableCode);
         handler.post(sendCode);
 
@@ -144,6 +145,8 @@ public class WiFiScanner extends Service {
     private Runnable sendCode = new Runnable() {
         @Override
         public void run() {
+
+            Log.v("asd", mainStatus.toString());
             if((commands.equals("on") || commands.equals("ff")) && !slience){
                 if (!mainStatus) {
                     Intent k = new Intent(WiFiScanner.this, MainActivity.class);

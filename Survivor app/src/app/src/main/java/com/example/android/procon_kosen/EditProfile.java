@@ -54,10 +54,10 @@ public class EditProfile extends AppCompatActivity {
 
         // Get value from EditText and Spinner on Edit-profile page
         SharedPreferences sharedpreferences = getSharedPreferences("contentProfile", Context.MODE_PRIVATE);
-        mName.setText(sharedpreferences.getString("name", null));
-        mSibling1.setText(sharedpreferences.getString("sibling1", null));
-        mSibling2.setText(sharedpreferences.getString("sibling2", null));
-        mBirthday.setText(sharedpreferences.getString("birthday", null));
+        mName.setText(sharedpreferences.getString("name", ""));
+        mSibling1.setText(sharedpreferences.getString("sibling1", ""));
+        mSibling2.setText(sharedpreferences.getString("sibling2", ""));
+        mBirthday.setText(sharedpreferences.getString("birthday", ""));
 
         // Get value from spinner's blood group and Set selection
         String[] i = getResources().getStringArray(R.array.blood_group_spinner);

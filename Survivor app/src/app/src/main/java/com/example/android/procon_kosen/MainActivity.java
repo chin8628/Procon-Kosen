@@ -13,6 +13,7 @@ import android.content.pm.PackageManager;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Handler;
+import android.os.PowerManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -229,6 +230,10 @@ public class MainActivity extends AppCompatActivity {
                         case "on":
                             if(!soundActive)
                             {
+                                PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+                                PowerManager.WakeLock wl = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "My Tag");
+                                wl.acquire();
+
                                 mp = MediaPlayer.create(MainActivity.this, R.raw.loudalarm);
                                 mp.setLooping(true);
                                 soundActive = true;
