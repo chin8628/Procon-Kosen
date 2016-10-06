@@ -21,6 +21,60 @@
     </item>
     <item
         is-multidex="true"
+        jar="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
+        <dex dex="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_5e2ce974b07fbac69381b32439a4d97d29b3492d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
+        <dex dex="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.0_c3b888c504ecda52653284e2132fa50ccd5bc094\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="60d7b23621d31e6f42f4f76f16af467e57a20cda">
+        <dex dex="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_94205e88117448ac5364d774184a2f0fe8aa3517\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
+        <dex dex="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_f3ca6e0319e0920c22a9bfea48a3c83706a8b6a0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
+        <dex dex="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.0_83e88879bcc36f84c757a4c0f937be4d994208ab\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
+        <dex dex="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.0_82c17554d7c80183b7d38fa1d7fe85258b40490a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -48,15 +102,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\libs\internal_impl-24.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
-        <dex dex="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_5e2ce974b07fbac69381b32439a4d97d29b3492d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -70,17 +115,8 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="42957d240b055cf503407639ca12877936553e5c">
+        sha1="66f7ad0a8095ac2e15bea88bcf86844986719b33">
         <dex dex="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_e74d0826262722d7baf066b5b38e7a6e9f36de13\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
-        <dex dex="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.0_c3b888c504ecda52653284e2132fa50ccd5bc094\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -88,7 +124,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="2296b0ff0b9d86b55346cd728149da342f030fdd">
+        sha1="0c18e8350e8dc792210c3bbc396fa45ba660e7f6">
         <dex dex="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_248e4d3f48eedd77493d298fc89a1826ec441cdf\classes.dex" />
     </item>
     <item
@@ -102,15 +138,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\jars\libs\internal_impl-24.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="60d7b23621d31e6f42f4f76f16af467e57a20cda">
-        <dex dex="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_94205e88117448ac5364d774184a2f0fe8aa3517\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -120,39 +147,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\libs\internal_impl-24.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
-        <dex dex="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_f3ca6e0319e0920c22a9bfea48a3c83706a8b6a0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
-        <dex dex="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.0_83e88879bcc36f84c757a4c0f937be4d994208ab\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
         sha1="45f5eda279825ff470e3f51019d374d1ef61e000">
         <dex dex="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.0_465973b0a1e6118ad7476d52c81a61c5341d4fe2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
-        <dex dex="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.0_82c17554d7c80183b7d38fa1d7fe85258b40490a\classes.dex" />
     </item>
 
 </items>

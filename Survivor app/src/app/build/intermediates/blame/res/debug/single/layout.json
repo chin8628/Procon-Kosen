@@ -16,12 +16,12 @@
         "source": "E:\\Work\\Git Kraken\\Procon-Kosen\\Survivor app\\src\\app\\src\\main\\res\\layout\\intro_slide_fragment_3.xml"
     },
     {
-        "merged": "E:\\Work\\Git Kraken\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
-        "source": "E:\\Work\\Git Kraken\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
-    },
-    {
         "merged": "E:\\Work\\Git Kraken\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_edit_profile.xml",
         "source": "E:\\Work\\Git Kraken\\Procon-Kosen\\Survivor app\\src\\app\\src\\main\\res\\layout\\activity_edit_profile.xml"
+    },
+    {
+        "merged": "E:\\Work\\Git Kraken\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "E:\\Work\\Git Kraken\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
         "merged": "E:\\Work\\Git Kraken\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
@@ -148,12 +148,12 @@
         "source": "E:\\Work\\Git Kraken\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\abc_screen_simple.xml"
     },
     {
-        "merged": "E:\\Work\\Git Kraken\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
-        "source": "E:\\Work\\Git Kraken\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\abc_list_menu_item_icon.xml"
-    },
-    {
         "merged": "E:\\Work\\Git Kraken\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
         "source": "E:\\Work\\Git Kraken\\Procon-Kosen\\Survivor app\\src\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "E:\\Work\\Git Kraken\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "E:\\Work\\Git Kraken\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
         "merged": "E:\\Work\\Git Kraken\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",

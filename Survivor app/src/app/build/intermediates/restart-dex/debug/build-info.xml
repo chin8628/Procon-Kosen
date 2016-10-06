@@ -4,33 +4,40 @@
     density="560dpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="448229274476769"
+    timestamp="452508564481775"
     token="4620979978408941541"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="209" />
+        duration="213" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="31" />
+        duration="8" />
     <task
         name="verifier"
-        duration="10" />
+        duration="3" />
 
     <artifact
-        location="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
+        location="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+        type="DEX" />
 
     <build
-        timestamp="448229274476769"
+        timestamp="452375318420285"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="452508564481775"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>

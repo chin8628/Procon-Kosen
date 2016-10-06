@@ -12,8 +12,11 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Handler;
 import android.os.PowerManager;
+import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -62,6 +65,16 @@ public class MainActivity extends AppCompatActivity {
                             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 1001);
                             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1002);
                             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.RECEIVE_BOOT_COMPLETED}, 1003);
+                            Intent k = new Intent();
+                            String packageName = MainActivity.this.getPackageName();
+                            PowerManager pm = (PowerManager) MainActivity.this.getSystemService(Context.POWER_SERVICE);
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                                if (!pm.isIgnoringBatteryOptimizations(packageName)){
+                                    k.setAction(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
+                                    k.setData(Uri.parse("package:" + packageName));
+                                    startActivity(k);
+                                }
+                            }
                         }
                     })
                     .setIcon(android.R.drawable.ic_dialog_alert).show();
@@ -157,6 +170,7 @@ public class MainActivity extends AppCompatActivity {
         Intent mainBroadcaster = new Intent("mainBroadcaster");
         mainBroadcaster.putExtra("mainstatus", true);
         sendBroadcast(mainBroadcaster);
+
 
         handler.postDelayed(runnableCode, 5000);
 
