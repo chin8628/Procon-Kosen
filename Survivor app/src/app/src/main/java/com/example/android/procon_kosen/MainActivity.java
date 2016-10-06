@@ -59,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
                     .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 1001);
-                            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1001);
-                            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.RECEIVE_BOOT_COMPLETED}, 1002);
+                            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1002);
+                            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.RECEIVE_BOOT_COMPLETED}, 1003);
                         }
                     })
                     .setIcon(android.R.drawable.ic_dialog_alert).show();
@@ -207,8 +207,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onStop()
     {
         super.onStop();
-        //Broadcast to service that the application is no longer running
-        handler.post(runnableCode);
+        //Broadcast to service that the application is running
+        Intent mainBroadcaster = new Intent("mainBroadcaster");
+        mainBroadcaster.putExtra("mainstatus", false);
+        sendBroadcast(mainBroadcaster);
     }
 
     private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
