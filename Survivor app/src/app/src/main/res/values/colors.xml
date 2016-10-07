@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E65100</color>
+    <color name="colorPrimaryDark">#a82112</color>
+    <color name="colorAccent">#FFA726</color>
+
+    <!-- Intro color page -->
+    <color name="colorIntro1">#374f69</color>
+    <color name="colorIntro2">#65a630</color>
+    <color name="colorIntro3">#6a80bf</color>
+    <color name="colorIntro4">#66b8e7</color>
+    <color name="colorIntro5">#f26b53</color>
+
+    <!-- Main page -->
+    <color name="colorBtnGroup">#a82112</color>
+    <color name="colorNotification">#E65100</color>
+
+    <!-- Point navigate -->
+    <color name="colorActive">#FFA726</color>
+    <color name="colorInActive">#EEE</color>
+
+    <color name="colorTextValidate">#F38960</color>
+
+</resources>

@@ -1,0 +1,143 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:2:1-46:12
+	package
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:3:5-47
+		INJECTED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:5:5-75
+	android:name
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:5:22-73
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:6:5-76
+	android:name
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:6:22-73
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:7:5-78
+	android:name
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:7:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:8:5-80
+	android:name
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:8:22-78
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:9:5-80
+	android:name
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:9:22-78
+uses-permission#android.permission.ACCESS_NOTIFICATION_POLICY
+ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:10:5-85
+	android:name
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:10:22-82
+uses-permission#android.permission.WAKE_LOCK
+ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:11:5-68
+	android:name
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:11:22-65
+uses-permission#android.permission.DISABLE_KEYGUARD
+ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:12:5-75
+	android:name
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:12:22-72
+uses-permission#android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
+ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:13:5-95
+	android:name
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:13:22-92
+application
+ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:15:5-44:19
+MERGED from [com.android.support:appcompat-v7:24.2.0] E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.0] E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.0\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-compat:24.2.0] E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.0] E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.2.0] E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.0] E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.0] E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.0] E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.0] E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\AndroidManifest.xml:25:5-20
+	android:label
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:18:9-41
+	android:supportsRtl
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:19:9-35
+	android:allowBackup
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:16:9-35
+	android:icon
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:17:9-43
+	android:theme
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:20:9-40
+activity#com.example.android.procon_kosen.MainActivity
+ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:22:9-28:20
+	android:screenOrientation
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:22:48-84
+	android:name
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:22:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:23:13-27:29
+action#android.intent.action.MAIN
+ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:24:17-69
+	android:name
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:24:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:26:17-77
+	android:name
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:26:27-74
+activity#com.example.android.procon_kosen.EditProfile
+ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:29:9-86
+	android:screenOrientation
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:29:47-83
+	android:name
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:29:19-46
+receiver#com.example.android.procon_kosen.MyBroadcastReceiver
+ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:31:9-35:20
+	android:name
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:31:19-54
+intent-filter#android.intent.action.BOOT_COMPLETED
+ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:32:13-34:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:33:17-79
+	android:name
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:33:25-76
+service#com.example.android.procon_kosen.WiFiScanner
+ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:37:9-40:39
+	android:enabled
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:39:13-35
+	android:exported
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:40:13-36
+	android:name
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:38:13-40
+activity#com.example.android.procon_kosen.IntroSlide
+ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:42:9-84
+	android:screenOrientation
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:42:46-82
+	android:name
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:42:19-45
+activity#com.example.android.procon_kosen.IntroFragment2
+ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:43:9-98
+	android:screenOrientation
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:43:50-86
+	android:name
+		ADDED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:43:19-49
+uses-sdk
+INJECTED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:24.2.0] E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:24.2.0] E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.0\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-compat:24.2.0] E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:animated-vector-drawable:24.2.0] E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:24.2.0] E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.0\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-core-utils:24.2.0] E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-media-compat:24.2.0] E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:24.2.0] E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-fragment:24.2.0] E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\AndroidManifest.xml:21:5-23:60
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:24.2.0] E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Work\Git Kraken\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml
