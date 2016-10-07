@@ -27,7 +27,7 @@ public class EditProfile extends AppCompatActivity {
     private Spinner mBlood;
 
     // Check entire EditText have some is empty
-    private boolean isSomeEditTextEmpty;
+    private boolean isSomeEditTextEmpty = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
