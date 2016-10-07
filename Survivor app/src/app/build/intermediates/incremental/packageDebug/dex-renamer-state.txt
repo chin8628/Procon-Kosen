@@ -1,7 +1,7 @@
-#Thu Oct 06 16:25:29 ICT 2016
-base.0=E\:\\Work\\Git Kraken\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_248e4d3f48eedd77493d298fc89a1826ec441cdf
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=E\:\\Work\\Git Kraken\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_e74d0826262722d7baf066b5b38e7a6e9f36de13\\classes.dex
-base.1=E\:\\Work\\Git Kraken\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_e74d0826262722d7baf066b5b38e7a6e9f36de13
-file.0=E\:\\Work\\Git Kraken\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_248e4d3f48eedd77493d298fc89a1826ec441cdf\\classes.dex
+#Thu Oct 06 21:45:14 ICT 2016
+base.0=C\:\\Users\\boon8\\Desktop\\Procon Kosen Project\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_25f798ec33626901195ed7969cf3197ed555b9c9
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\boon8\\Desktop\\Procon Kosen Project\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_8451bcbc9cff99048af4e7fe47a693d4d16af769\\classes.dex
+base.1=C\:\\Users\\boon8\\Desktop\\Procon Kosen Project\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_8451bcbc9cff99048af4e7fe47a693d4d16af769
+file.0=C\:\\Users\\boon8\\Desktop\\Procon Kosen Project\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_25f798ec33626901195ed7969cf3197ed555b9c9\\classes.dex
