@@ -211,9 +211,8 @@ public class MainActivity extends AppCompatActivity {
     {
         super.onStop();
         //Broadcast to service that the application is running
-        Intent mainBroadcaster = new Intent("mainBroadcaster");
-        mainBroadcaster.putExtra("mainstatus", false);
-        sendBroadcast(mainBroadcaster);
+        handler.post(runnableCode);
+
     }
 
     private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {

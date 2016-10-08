@@ -1,6 +1,8 @@
 package com.example.android.procon_kosen;
 
 
+import android.app.Notification;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -67,6 +69,10 @@ public class WiFiScanner extends Service {
         registerReceiver(mStausReceiver, new IntentFilter("mainBroadcaster"));
         registerReceiver(mSlienceReciver, new IntentFilter("slience b"));
         handler = new Handler();
+
+        WifiManager.WifiLock wifiLock = ((WifiManager) getSystemService(Context.WIFI_SERVICE)).createWifiLock(WifiManager.WIFI_MODE_FULL, "mylock");
+        wifiLock.acquire();
+
 
         handler.post(runnableCode);
         handler.post(sendCode);
@@ -164,4 +170,5 @@ public class WiFiScanner extends Service {
             handler.postDelayed(sendCode, 10000);
         }
     };
+
 }
