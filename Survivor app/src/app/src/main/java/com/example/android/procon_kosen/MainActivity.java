@@ -159,6 +159,7 @@ public class MainActivity extends AppCompatActivity {
         mainBroadcaster.putExtra("mainstatus", true);
         sendBroadcast(mainBroadcaster);
 
+
         handler.postDelayed(runnableCode, 5000);
 
     }
