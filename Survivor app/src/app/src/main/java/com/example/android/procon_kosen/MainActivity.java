@@ -2,7 +2,9 @@ package com.example.android.procon_kosen;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.app.Notification;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -223,9 +225,8 @@ public class MainActivity extends AppCompatActivity {
     {
         super.onStop();
         //Broadcast to service that the application is running
-        Intent mainBroadcaster = new Intent("mainBroadcaster");
-        mainBroadcaster.putExtra("mainstatus", false);
-        sendBroadcast(mainBroadcaster);
+        handler.post(runnableCode);
+
     }
 
     private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
