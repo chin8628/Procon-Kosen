@@ -147,7 +147,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/monitor_btn"
-            android:id="@+id/button"
+            android:id="@+id/monitor_btn"
             android:layout_alignTop="@+id/copy_btn"
             android:layout_toRightOf="@+id/copy_btn"
             android:layout_toEndOf="@+id/copy_btn" />

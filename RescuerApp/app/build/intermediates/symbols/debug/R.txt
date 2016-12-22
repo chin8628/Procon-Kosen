@@ -510,7 +510,6 @@ int id always 0x7f0c001d
 int id beginning 0x7f0c001a
 int id blood_spinner 0x7f0c005d
 int id bottom 0x7f0c0022
-int id button 0x7f0c0063
 int id buttonPanel 0x7f0c002e
 int id cancel_action 0x7f0c0068
 int id checkbox 0x7f0c003c
@@ -546,6 +545,7 @@ int id listMode 0x7f0c0009
 int id list_item 0x7f0c002b
 int id media_actions 0x7f0c006a
 int id middle 0x7f0c001c
+int id monitor_btn 0x7f0c0063
 int id multiply 0x7f0c0014
 int id never 0x7f0c0020
 int id none 0x7f0c000e

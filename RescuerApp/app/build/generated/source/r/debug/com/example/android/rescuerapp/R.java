@@ -1805,7 +1805,6 @@ containing a value of this type.
         public static final int beginning=0x7f0c001a;
         public static final int blood_spinner=0x7f0c005d;
         public static final int bottom=0x7f0c0022;
-        public static final int button=0x7f0c0063;
         public static final int buttonPanel=0x7f0c002e;
         public static final int cancel_action=0x7f0c0068;
         public static final int checkbox=0x7f0c003c;
@@ -1841,6 +1840,7 @@ containing a value of this type.
         public static final int list_item=0x7f0c002b;
         public static final int media_actions=0x7f0c006a;
         public static final int middle=0x7f0c001c;
+        public static final int monitor_btn=0x7f0c0063;
         public static final int multiply=0x7f0c0014;
         public static final int never=0x7f0c0020;
         public static final int none=0x7f0c000e;

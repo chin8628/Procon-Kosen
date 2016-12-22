@@ -3,7 +3,6 @@ package com.example.android.rescuerapp;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Intent;
-import android.net.wifi.WifiManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,8 +17,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Locale;
-import java.util.Map;
-import java.util.StringTokenizer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mGenBtn;
     private Button mCopyBtn;
     private Button mHotspotBtn;
+    private Button mMonitorBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,6 +125,15 @@ public class MainActivity extends AppCompatActivity {
                 Intent tetherSettings = new Intent();
                 tetherSettings.setClassName("com.android.settings", "com.android.settings.TetherSettings");
                 startActivity(tetherSettings);
+            }
+        });
+
+        mMonitorBtn = (Button) findViewById(R.id.monitor_btn);
+        mMonitorBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, MonitorActivity.class);
+                startActivity(i);
             }
         });
 

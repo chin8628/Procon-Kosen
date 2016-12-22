@@ -50,10 +50,10 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\src\main\AndroidManifest.xml:17:17-77
 	android:name
 		ADDED from C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\src\main\AndroidManifest.xml:17:27-74
-activity#com.example.android.rescuerapp.Monitor
-ADDED from C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\src\main\AndroidManifest.xml:20:9-54
+activity#com.example.android.rescuerapp.MonitorActivity
+ADDED from C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\src\main\AndroidManifest.xml:20:9-62
 	android:name
-		ADDED from C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\src\main\AndroidManifest.xml:20:19-42
+		ADDED from C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\src\main\AndroidManifest.xml:20:19-50
 uses-sdk
 INJECTED from C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:24.2.0] C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\AndroidManifest.xml:21:5-23:78
