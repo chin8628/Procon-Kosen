@@ -6,6 +6,7 @@
     <string name="generate_btn">Generate SSID</string>
     <string name="copy_btn">Copy SSID</string>
     <string name="hotspot_btn">Goto Hotspot Setting</string>
+    <string name="monitor_btn">Monitor</string>
 
     <string name="command_label">Command</string>
     <string-array name="command_spinner">
@@ -29,4 +30,9 @@
         <item>B</item>
         <item>AB</item>
     </string-array>
+
+    <!-- String on Monitor page -->
+    <string name="countDeviceLabel">Number Devices</string>
+    <string name="countDevice">0</string>
+
 </resources>

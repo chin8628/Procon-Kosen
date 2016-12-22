@@ -91,16 +91,6 @@
         android:layout_below="@+id/age_spinner"
         android:background="@android:color/darker_gray"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/blood_label"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/textView5"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/separate_line2"
-        android:layout_alignParentLeft="true" />
-
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -152,6 +142,25 @@
             android:layout_alignTop="@+id/copy_btn"
             android:layout_toRightOf="@+id/copy_btn"
             android:layout_toEndOf="@+id/copy_btn" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/monitor_btn"
+            android:id="@+id/button"
+            android:layout_alignTop="@+id/copy_btn"
+            android:layout_toRightOf="@+id/copy_btn"
+            android:layout_toEndOf="@+id/copy_btn" />
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/blood_label"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/separate_line2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

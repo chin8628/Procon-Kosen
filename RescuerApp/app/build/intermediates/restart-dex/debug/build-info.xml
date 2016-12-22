@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="arm64-v8a,armeabi-v7a,armeabi"
-    api-level="24"
-    density="560dpi"
-    format="7"
-    timestamp="5554830240162"
-    token="1482735995225525185" >
+    abi="x86"
+    api-level="23"
+    density="xxhdpi"
+    format="8"
+    plugin-version="2.2.3"
+    timestamp="184836004930142"
+    token="-595578853913800847"
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="4707" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="1972" />
     <task
         name="verifier"
-        duration="0" />
+        duration="176" />
 
     <artifact
-        location="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\outputs\apk\app-debug.apk"
+        location="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
-    <build timestamp="5554830240162" >
+    <build
+        timestamp="184836004930142"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
 

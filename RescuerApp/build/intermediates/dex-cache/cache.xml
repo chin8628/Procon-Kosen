@@ -2,109 +2,157 @@
 <items version="2" >
 
     <item
-        jar="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\jars\libs\internal_impl-24.2.0.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="60d7b23621d31e6f42f4f76f16af467e57a20cda">
-        <dex dex="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.0_fb14b172ac1de543c04a4b7f27237f3c51f775ce.jar" />
-    </item>
-    <item
-        jar="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\libs\internal_impl-24.2.0.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
-        <dex dex="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.0_4696434e2308299b87fa24638134a053c0d34fe0.jar" />
-    </item>
-    <item
-        jar="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
-        <dex dex="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.0_4ff156153e038453e9d079c15445b832560753c7.jar" />
-    </item>
-    <item
-        jar="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\jars\libs\internal_impl-24.2.0.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
-        <dex dex="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.0_6e3a3145e6b03aa20e092eec502513ed3614cbec.jar" />
-    </item>
-    <item
-        jar="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
-        <dex dex="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.0_d7d5a5d659dd6a9ba0269db50c86789a96559a78.jar" />
-    </item>
-    <item
-        jar="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
-        <dex dex="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.0_826757cfe979cdbceac9c84a7281a4202c914391.jar" />
-    </item>
-    <item
-        jar="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\jars\libs\internal_impl-24.2.0.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
         revision="24.0.1"
         sha1="6e02e34594ebe9c0501ffda8dd48497f81b82977">
-        <dex dex="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.0_17a82d727b4099b3be49d85c9caafaca02c2df0b.jar" />
+        <dex dex="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_61460d55b67e843789f2312c92bdf4e2585307b4\classes.dex" />
     </item>
     <item
-        jar="C:\Users\frostoxin\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.0\support-annotations-24.2.0.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
         revision="24.0.1"
-        sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
-        <dex dex="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.0_7a900c4302f9f53deb72e9617714404ec76740c0.jar" />
+        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
+        <dex dex="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_9c3b002b001379985cd4eec3604b75c052d3416a\classes.dex" />
     </item>
     <item
-        jar="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
-        <dex dex="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.0_5c513bb065f5126e2906f278889e3f2b4c05f9bf.jar" />
-    </item>
-    <item
-        jar="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
-        <dex dex="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.0_495dd4200dcf08526f0a5bf222302895c35b6c70.jar" />
-    </item>
-    <item
-        jar="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
-        <dex dex="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.0_4181ec8d39457791d77b10bda82d01843d59d811.jar" />
-    </item>
-    <item
-        jar="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
-        <dex dex="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.0_ce1a6486dbc29fb4354a4392a48ff1f662f92aeb.jar" />
-    </item>
-    <item
-        jar="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="45f5eda279825ff470e3f51019d374d1ef61e000">
-        <dex dex="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.0_f433619e3d1d8a30108347266ea6881de134bef6.jar" />
-    </item>
-    <item
-        jar="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
         revision="24.0.1"
         sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
-        <dex dex="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.0_f56929362b07fc1e4c0e2e190f17b1ace6d41822.jar" />
+        <dex dex="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.0_7a7b9feb90ab60e7f4ed2ebf38949382d2242827\classes.dex" />
     </item>
     <item
-        jar="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\libs\internal_impl-24.2.0.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
+        <dex dex="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.0_5e26fdfbfe82989d3631623541f9407952a5395b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
+        <dex dex="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.0_901112879e80e4082f3c4b2d062e5f6fbcec0855\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
+        <dex dex="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.0_8f64d565b27ea7762d0ec4b56bb9139a822de7f4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
         revision="24.0.1"
         sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
-        <dex dex="E:\Work\Git Kraken\Procon-Kosen\RescuerApp\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.0_3d0d890afcf149b03105191bb6e64f6fbc08d45a.jar" />
+        <dex dex="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_a897ce02a80f13287a1c69f36b3fc4627db6144c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="45f5eda279825ff470e3f51019d374d1ef61e000">
+        <dex dex="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.0_ec61b861a480ab0288843171e9af24927b1c1db8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d2ed5ccf5158225b8f7b4dcfb602916de49f5722">
+        <dex dex="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_d8e4cdb1a00b0bfe50200bce458d810e85a082a9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
+        <dex dex="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.0_2225f6ad6c8047b98a674504d93628765eccbc4d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\boon8\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.0\support-annotations-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
+        <dex dex="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.0_0eb49eb3983c9d8da432305a9a822d6fbe4abdb5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
+        <dex dex="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_b6c0bd7caa391a283c733812a6aa06a2aac94020\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
+        <dex dex="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.0_6c79b671cfa10b61c5b5b4f46e4fb6c6a4837afb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
+        <dex dex="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.0_c1deca1f9c44a693480f53b51a7f7d02dc27eb33\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="6903945dad8627880a86c7b532b9277eb8160df9">
+        <dex dex="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_6f6d3aaf6640576d309760e75e481374fc160ae3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
+        <dex dex="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.0_9d41ad9204955b002dbef41082dfb53ad691bd34\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="60d7b23621d31e6f42f4f76f16af467e57a20cda">
+        <dex dex="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_409ee4b5558183bb3de747325fbdd4fe7dca7464\classes.dex" />
     </item>
 
 </items>

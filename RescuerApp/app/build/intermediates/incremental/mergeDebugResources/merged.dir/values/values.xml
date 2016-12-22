@@ -350,8 +350,11 @@
     <string name="blood_label">Blood group</string>
     <string name="command_label">Command</string>
     <string name="copy_btn">Copy SSID</string>
+    <string name="countDevice">0</string>
+    <string name="countDeviceLabel">Number Devices</string>
     <string name="generate_btn">Generate SSID</string>
     <string name="hotspot_btn">Goto Hotspot Setting</string>
+    <string name="monitor_btn">Monitor</string>
     <string name="search_menu_title">Search</string>
     <string name="ssid_label">SSID</string>
     <string name="status_bar_notification_info_overflow">999+</string>
