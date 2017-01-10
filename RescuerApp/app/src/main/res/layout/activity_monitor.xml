@@ -28,4 +28,13 @@
         android:layout_marginTop="109dp"
         android:id="@+id/countDeviceLabel"
         android:text="@string/countDeviceLabel" />
+
+    <Button
+        android:text="Refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/countDeviceLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="104dp"
+        android:id="@+id/refreshBtn" />
 </RelativeLayout>

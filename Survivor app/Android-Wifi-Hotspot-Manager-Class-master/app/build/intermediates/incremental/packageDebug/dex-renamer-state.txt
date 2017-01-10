@@ -1,0 +1,7 @@
+#Tue Jan 10 14:53:42 ICT 2017
+base.0=C\:\\Users\\boon8\\Desktop\\Procon-Kosen\\Survivor app\\Android-Wifi-Hotspot-Manager-Class-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_66039a5e339decae98cb663f894c47a3d5f1e352
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\boon8\\Desktop\\Procon-Kosen\\Survivor app\\Android-Wifi-Hotspot-Manager-Class-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_3920b625c6d8eb576793be1ace6012c7fbfbc4d2\\classes.dex
+base.1=C\:\\Users\\boon8\\Desktop\\Procon-Kosen\\Survivor app\\Android-Wifi-Hotspot-Manager-Class-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_3920b625c6d8eb576793be1ace6012c7fbfbc4d2
+file.0=C\:\\Users\\boon8\\Desktop\\Procon-Kosen\\Survivor app\\Android-Wifi-Hotspot-Manager-Class-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_66039a5e339decae98cb663f894c47a3d5f1e352\\classes.dex
