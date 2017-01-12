@@ -15,6 +15,8 @@ import com.example.android.rescuerapp.wifihotspotutils.FinishScanListener;
 import com.example.android.rescuerapp.wifihotspotutils.mWifiApManager;
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MonitorActivity extends AppCompatActivity {
 
@@ -34,6 +36,9 @@ public class MonitorActivity extends AppCompatActivity {
         countDevice = (TextView) findViewById(R.id.countDevice);
 
         wifiApManager = new mWifiApManager(this);
+
+        Timer timer = new Timer();
+        timer.schedule(new ScanInterval(), 0, 2000);
 
         mRefreshBtn = (Button) findViewById(R.id.refreshBtn);
         mRefreshBtn.setOnClickListener(new View.OnClickListener() {
@@ -70,6 +75,13 @@ public class MonitorActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    class ScanInterval extends TimerTask {
+        public void run() {
+            scan();
+            Log.v("wow", "wow");
+        }
     }
 
 }
