@@ -1,44 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="armeabi-v7a,armeabi"
+    abi="x86"
     api-level="23"
     density="xxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="17839315669362"
+    timestamp="84768474716922"
     token="-595578853913800847"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1102" />
+        duration="8821" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="81" />
+        duration="2815" />
     <task
         name="verifier"
-        duration="14" />
+        duration="498" />
 
     <artifact
-        location="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
-        type="DEX" />
+        location="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="17729384957347"
-        verifier="MANIFEST_FILE_CHANGE" >
+        timestamp="84768474716922"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="17839315669362"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\boon8\Desktop\Procon-Kosen\RescuerApp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>
