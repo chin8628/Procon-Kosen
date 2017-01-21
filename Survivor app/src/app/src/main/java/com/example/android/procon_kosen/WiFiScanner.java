@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.wifi.ScanResult;
+import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Handler;
@@ -136,6 +137,7 @@ public class WiFiScanner extends Service {
                     {
                         commands = keyComand[i];
                         target = keyBlood[k];
+                        ConnectWifi(Integer.toString((formattedDate+keyComand[i]+keyAge[j]+keyBlood[k]).hashCode()));
                         return;
                     }
                 }
@@ -174,4 +176,18 @@ public class WiFiScanner extends Service {
         }
     };
 
+    private void ConnectWifi(String name){
+        WifiConfiguration wifiConfig = new WifiConfiguration();
+
+        wifiConfig.SSID = String.format("\"%s\"", name);
+        //wifiConfig.preSharedKey = String.format("\"%s\"", "Wifi password");
+        int netId = mainWifi.addNetwork(wifiConfig);
+        mainWifi.disconnect();
+        mainWifi.enableNetwork(netId, true);
+        mainWifi.reconnect();
+    }
+
+    private void DisconnectWifi(){
+        mainWifi.disconnect();
+    }
 }
