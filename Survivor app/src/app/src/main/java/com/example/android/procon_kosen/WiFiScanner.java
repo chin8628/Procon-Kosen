@@ -33,6 +33,10 @@ public class WiFiScanner extends Service {
     private ProfileHelper ph;
     private Handler handler;
     private boolean slience = false;
+    private String ssidName = "";
+    List<String> ssidList;
+    List<ScanResult> wifiList;
+
     private BroadcastReceiver mStausReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -85,17 +89,14 @@ public class WiFiScanner extends Service {
     class WifiReceiver extends BroadcastReceiver {
 
         public void onReceive(Context c, Intent intent) {
-            List<ScanResult> wifiList;
             wifiList = mainWifi.getScanResults();
-            List<String> ssidList = new ArrayList<>();
+            ssidList = new ArrayList<>();
             for (int i = 0; i < wifiList.size(); i++) {
                 ssidList.add(wifiList.get(i).SSID);
             }
             Log.v("asd", ssidList.toString());
             SsidValidation(ssidList);
-            wifiList.clear();
-            ssidList.clear();
-            handler.postDelayed(runnableCode, 4500);
+            handler.postDelayed(runnableCode, 2500);
         }
 
     private void SsidValidation(List<String> ssidList) {
@@ -137,7 +138,7 @@ public class WiFiScanner extends Service {
                     {
                         commands = keyComand[i];
                         target = keyBlood[k];
-                        ConnectWifi(Integer.toString((formattedDate+keyComand[i]+keyAge[j]+keyBlood[k]).hashCode()));
+                        ssidName = Integer.toString((formattedDate+keyComand[i]+keyAge[j]+keyBlood[k]).hashCode());
                         return;
                     }
                 }
@@ -167,16 +168,23 @@ public class WiFiScanner extends Service {
                 Intent j = new Intent("command recived");
                 j.putExtra("comamnds", commands);
                 j.putExtra("target", target);
+                j.putExtra("level", wifiList.get(ssidList.indexOf(ssidName)).level);
                 sendBroadcast(j);
+                ConnectWifi(ssidName);
             }
             slience = false;
             commands = "NULL";
             target = "NULL" ;
-            handler.postDelayed(sendCode, 10000);
+            handler.postDelayed(sendCode, 5000);
         }
     };
 
     private void ConnectWifi(String name){
+
+        Log.v("asd", "attemp to connect " + name);
+        mainWifi.setWifiEnabled(true);
+
+
         WifiConfiguration wifiConfig = new WifiConfiguration();
 
         wifiConfig.SSID = String.format("\"%s\"", name);

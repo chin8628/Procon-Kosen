@@ -1,6 +1,7 @@
 package com.example.android.procon_kosen;
 
 import android.Manifest;
+import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -14,6 +15,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.media.PlaybackParams;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
@@ -24,6 +26,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -230,19 +233,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
+        @TargetApi(Build.VERSION_CODES.M)
         @Override
         public void onReceive(Context context, Intent intent) {
             // Get extra data included in the Intent
             String mCommand;
             String mtarget;
+            int signalStr;
             mCommand= intent.getStringExtra("comamnds");
             mtarget= intent.getStringExtra("target");
+            signalStr = 100 + intent.getIntExtra("level", -100);
+
+            Log.v("ssr", Integer.toString(signalStr));
+
             if(mCommand != null && mtarget != null )
             {
                 if(mtarget.equals("AA") || mtarget.equals(sharedpreferences.getString("blood", "")))
                 {
                     switch (mCommand) {
                         case "on":
+                            PlaybackParams params = new PlaybackParams();
+                            params.setSpeed(signalStr/20);
                             if(!soundActive)
                             {
                                 PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
@@ -251,6 +262,7 @@ public class MainActivity extends AppCompatActivity {
 
                                 mp = MediaPlayer.create(MainActivity.this, R.raw.loudalarm);
                                 mp.setLooping(true);
+                                mp.setPlaybackParams(params);
                                 soundActive = true;
                                 am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), am.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
                                 mp.start();
@@ -259,6 +271,7 @@ public class MainActivity extends AppCompatActivity {
                                 soundButton.setText(R.string.silence_btn);
                                 soundButton.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.ic_volume_off_black_24dp,0,0,0);
                             }
+                            mp.setPlaybackParams(params);
                                 break;
                         case "ff":
                             soundActive = false;

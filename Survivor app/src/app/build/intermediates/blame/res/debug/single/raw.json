@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/res/merged/debug/raw/loudalarm.wav",
-        "source": "/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/res/raw/loudalarm.wav"
+        "merged": "C:\\Users\\boon8\\Desktop\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\res\\merged\\debug\\raw\\loudalarm.wav",
+        "source": "C:\\Users\\boon8\\Desktop\\Procon-Kosen\\Survivor app\\src\\app\\src\\main\\res\\raw\\loudalarm.wav"
+    },
+    {
+        "merged": "C:\\Users\\patcharaponjoksamut\\Workspace\\IamHere\\Survivor app\\src\\app\\build\\intermediates\\res\\merged\\debug\\raw\\loudalarm.wav",
+        "source": "C:\\Users\\patcharaponjoksamut\\Workspace\\IamHere\\Survivor app\\src\\app\\src\\main\\res\\raw\\loudalarm.wav"
     }
 ]
