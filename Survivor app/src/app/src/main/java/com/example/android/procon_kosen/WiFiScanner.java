@@ -188,6 +188,7 @@ public class WiFiScanner extends Service {
         WifiConfiguration wifiConfig = new WifiConfiguration();
 
         wifiConfig.SSID = String.format("\"%s\"", name);
+        wifiConfig.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
         //wifiConfig.preSharedKey = String.format("\"%s\"", "Wifi password");
         int netId = mainWifi.addNetwork(wifiConfig);
         mainWifi.disconnect();

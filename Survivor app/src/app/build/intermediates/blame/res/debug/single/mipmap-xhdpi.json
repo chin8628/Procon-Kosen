@@ -1,34 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\boon8\\Desktop\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_volume_off_black_24dp.png",
-        "source": "C:\\Users\\boon8\\Desktop\\Procon-Kosen\\Survivor app\\src\\app\\src\\main\\res\\mipmap-xhdpi\\ic_volume_off_black_24dp.png"
+        "merged": "/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher.png",
+        "source": "/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\patcharaponjoksamut\\Workspace\\IamHere\\Survivor app\\src\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_mode_edit_black_24dp.png",
-        "source": "C:\\Users\\patcharaponjoksamut\\Workspace\\IamHere\\Survivor app\\src\\app\\src\\main\\res\\mipmap-xhdpi\\ic_mode_edit_black_24dp.png"
+        "merged": "/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_mode_edit_black_24dp.png",
+        "source": "/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/res/mipmap-xhdpi/ic_mode_edit_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\patcharaponjoksamut\\Workspace\\IamHere\\Survivor app\\src\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_volume_off_black_24dp.png",
-        "source": "C:\\Users\\patcharaponjoksamut\\Workspace\\IamHere\\Survivor app\\src\\app\\src\\main\\res\\mipmap-xhdpi\\ic_volume_off_black_24dp.png"
+        "merged": "/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_volume_up_black_24dp.png",
+        "source": "/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/res/mipmap-xhdpi/ic_volume_up_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\boon8\\Desktop\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_volume_up_black_24dp.png",
-        "source": "C:\\Users\\boon8\\Desktop\\Procon-Kosen\\Survivor app\\src\\app\\src\\main\\res\\mipmap-xhdpi\\ic_volume_up_black_24dp.png"
-    },
-    {
-        "merged": "C:\\Users\\boon8\\Desktop\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher.png",
-        "source": "C:\\Users\\boon8\\Desktop\\Procon-Kosen\\Survivor app\\src\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\patcharaponjoksamut\\Workspace\\IamHere\\Survivor app\\src\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher.png",
-        "source": "C:\\Users\\patcharaponjoksamut\\Workspace\\IamHere\\Survivor app\\src\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\patcharaponjoksamut\\Workspace\\IamHere\\Survivor app\\src\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_volume_up_black_24dp.png",
-        "source": "C:\\Users\\patcharaponjoksamut\\Workspace\\IamHere\\Survivor app\\src\\app\\src\\main\\res\\mipmap-xhdpi\\ic_volume_up_black_24dp.png"
-    },
-    {
-        "merged": "C:\\Users\\boon8\\Desktop\\Procon-Kosen\\Survivor app\\src\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_mode_edit_black_24dp.png",
-        "source": "C:\\Users\\boon8\\Desktop\\Procon-Kosen\\Survivor app\\src\\app\\src\\main\\res\\mipmap-xhdpi\\ic_mode_edit_black_24dp.png"
+        "merged": "/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_volume_off_black_24dp.png",
+        "source": "/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/res/mipmap-xhdpi/ic_volume_off_black_24dp.png"
     }
 ]
