@@ -91,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
         nb = new NotificationBar(this);
         am = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
+
         //Initialize Ui object
         TextView name = (TextView) findViewById(R.id.name);
         TextView birthday = (TextView) findViewById(R.id.birthday);
@@ -293,6 +294,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
+
     private Runnable runnableCode = new Runnable() {
         @Override
         public void run() {
