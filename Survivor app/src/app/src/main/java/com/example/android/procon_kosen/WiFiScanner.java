@@ -8,12 +8,23 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
+import android.location.Location;
 import android.net.wifi.ScanResult;
+import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.util.Log;
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationServices;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -22,7 +33,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
-public class WiFiScanner extends Service {
+public class WiFiScanner extends Service implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
     private WifiManager mainWifi;
     private Boolean mainStatus = false;
@@ -32,6 +43,12 @@ public class WiFiScanner extends Service {
     private ProfileHelper ph;
     private Handler handler;
     private boolean slience = false;
+    private String ssidName = "";
+    private GoogleApiClient mGoogleApiClient;
+    private Location mLastLocation;
+    List<String> ssidList;
+    List<ScanResult> wifiList;
+
     private BroadcastReceiver mStausReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -40,7 +57,7 @@ public class WiFiScanner extends Service {
         }
 
     };
-    private BroadcastReceiver  mSlienceReciver = new BroadcastReceiver() {
+    private BroadcastReceiver mSlienceReciver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             slience = true;
@@ -48,6 +65,8 @@ public class WiFiScanner extends Service {
     };
 
     public WiFiScanner() {
+
+
     }
 
     @Override
@@ -74,9 +93,42 @@ public class WiFiScanner extends Service {
         WifiManager.WifiLock wifiLock = ((WifiManager) getSystemService(Context.WIFI_SERVICE)).createWifiLock(WifiManager.WIFI_MODE_FULL, "mylock");
         wifiLock.acquire();
 
+        // Create an instance of GoogleAPIClient
+
+        if (mGoogleApiClient == null) {
+            mGoogleApiClient = new GoogleApiClient.Builder(this)
+                    .addConnectionCallbacks(this)
+                    .addOnConnectionFailedListener(this)
+                    .addApi(LocationServices.API)
+                    .build();
+        }
+
+        mGoogleApiClient.connect();
 
         handler.post(runnableCode);
         handler.post(sendCode);
+
+    }
+
+    @Override
+    public void onConnected(@Nullable Bundle bundle) {
+
+        mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+    }
+
+    public Location getLastKnowLocation() {
+
+        return mLastLocation;
+
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
     }
 
@@ -84,17 +136,21 @@ public class WiFiScanner extends Service {
     class WifiReceiver extends BroadcastReceiver {
 
         public void onReceive(Context c, Intent intent) {
-            List<ScanResult> wifiList;
+
+            mainWifi.disconnect();
             wifiList = mainWifi.getScanResults();
-            List<String> ssidList = new ArrayList<>();
+            ssidList = new ArrayList<>();
             for (int i = 0; i < wifiList.size(); i++) {
                 ssidList.add(wifiList.get(i).SSID);
             }
             Log.v("asd", ssidList.toString());
             SsidValidation(ssidList);
-            wifiList.clear();
-            ssidList.clear();
-            handler.postDelayed(runnableCode, 4500);
+            handler.postDelayed(runnableCode, 2500);
+
+            Location tempLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+            if(tempLocation != null){
+                mLastLocation = tempLocation;
+            }
         }
 
     private void SsidValidation(List<String> ssidList) {
@@ -136,6 +192,7 @@ public class WiFiScanner extends Service {
                     {
                         commands = keyComand[i];
                         target = keyBlood[k];
+                        ssidName = Integer.toString((formattedDate+keyComand[i]+keyAge[j]+keyBlood[k]).hashCode());
                         return;
                     }
                 }
@@ -165,13 +222,35 @@ public class WiFiScanner extends Service {
                 Intent j = new Intent("command recived");
                 j.putExtra("comamnds", commands);
                 j.putExtra("target", target);
+                j.putExtra("level", wifiList.get(ssidList.indexOf(ssidName)).level);
                 sendBroadcast(j);
+                ConnectWifi(ssidName);
             }
             slience = false;
             commands = "NULL";
             target = "NULL" ;
-            handler.postDelayed(sendCode, 10000);
+            handler.postDelayed(sendCode, 5000);
         }
     };
 
+    private void ConnectWifi(String name){
+
+        Log.v("asd", "attemp to connect " + name);
+        mainWifi.setWifiEnabled(true);
+
+
+        WifiConfiguration wifiConfig = new WifiConfiguration();
+
+        wifiConfig.SSID = String.format("\"%s\"", name);
+        wifiConfig.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
+        //wifiConfig.preSharedKey = String.format("\"%s\"", "Wifi password");
+        int netId = mainWifi.addNetwork(wifiConfig);
+        mainWifi.disconnect();
+        mainWifi.enableNetwork(netId, true);
+        mainWifi.reconnect();
+    }
+
+    private void DisconnectWifi(){
+        mainWifi.disconnect();
+    }
 }
