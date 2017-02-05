@@ -2,43 +2,43 @@
 manifest
 ADDED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml:2:1-48:12
 	package
-		ADDED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:3:5-47
-		INJECTED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml
+		ADDED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml:3:5-47
+		INJECTED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:5:5-75
+ADDED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml:5:5-75
 	android:name
-		ADDED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:5:22-73
+		ADDED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml:5:22-73
 uses-permission#android.permission.CHANGE_WIFI_STATE
-ADDED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:6:5-76
+ADDED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml:6:5-76
 	android:name
-		ADDED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:6:22-73
+		ADDED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml:6:22-73
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:7:5-78
+ADDED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml:7:5-78
 	android:name
-		ADDED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:7:22-76
+		ADDED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml:7:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:8:5-80
+ADDED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml:8:5-80
 	android:name
-		ADDED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:8:22-78
+		ADDED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml:8:22-78
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:9:5-80
+ADDED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml:9:5-80
 	android:name
-		ADDED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:9:22-78
+		ADDED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml:9:22-78
 uses-permission#android.permission.ACCESS_NOTIFICATION_POLICY
-ADDED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:10:5-85
+ADDED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml:10:5-85
 	android:name
-		ADDED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:10:22-82
+		ADDED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml:10:22-82
 uses-permission#android.permission.WAKE_LOCK
-ADDED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml:11:5-68
+ADDED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml:11:5-68
 	android:name
 		ADDED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml:11:22-65
 uses-permission#android.permission.ACCESS_NETWORK_STATE
@@ -54,12 +54,17 @@ ADDED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src
 MERGED from [com.android.support:appcompat-v7:24.2.0] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:24.2.0] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-vector-drawable:24.2.0] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.0/AndroidManifest.xml:23:5-20
+MERGED from [com.google.android.gms:play-services-location:10.0.1] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/10.0.1/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-base:10.0.1] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:10.0.1] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.0.1/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:10.0.1] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.0.1/AndroidManifest.xml:19:5-21:19
 MERGED from [com.android.support:support-v4:24.2.0] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-fragment:24.2.0] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-core-utils:24.2.0] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-media-compat:24.2.0] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-core-ui:24.2.0] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:24.2.0] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.volley:volley:1.0.0] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.volley/volley/1.0.0/AndroidManifest.xml:9:5-20
 	android:label
 		ADDED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml:20:9-41
 	android:supportsRtl
@@ -123,21 +128,41 @@ ADDED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src
 	android:name
 		ADDED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml:45:19-49
 uses-sdk
-INJECTED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:appcompat-v7:24.2.0] C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:24.2.0] C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:24.2.0] C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.0\AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:support-v4:24.2.0] C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.0\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:24.2.0] C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-utils:24.2.0] C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-media-compat:24.2.0] C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:24.2.0] C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:24.2.0] C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\AndroidManifest.xml:21:5-23:58
+INJECTED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:multidex:1.0.1] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:appcompat-v7:24.2.0] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:24.2.0] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.2.0] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.0/AndroidManifest.xml:21:5-43
+MERGED from [com.google.android.gms:play-services-location:10.0.1] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/10.0.1/AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-base:10.0.1] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-tasks:10.0.1] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.0.1/AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-basement:10.0.1] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.0.1/AndroidManifest.xml:17:5-42
+MERGED from [com.android.support:support-v4:24.2.0] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:24.2.0] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:24.2.0] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-media-compat:24.2.0] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:24.2.0] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.0] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.volley:volley:1.0.0] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.volley/volley/1.0.0/AndroidManifest.xml:7:5-43
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:24.2.0] C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:appcompat-v7:24.2.0] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		INJECTED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\boon8\Desktop\Procon-Kosen\Survivor app\src\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/AndroidManifest.xml
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:10.0.1] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:10.0.1] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:10.0.1] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:10.0.1] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/AndroidManifest.xml:19:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:10.0.1] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.0.1/AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:10.0.1] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.0.1/AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:10.0.1] /Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.0.1/AndroidManifest.xml:20:20-65

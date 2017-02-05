@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/res/merged/debug/raw/gtm_analytics",
+        "source": "/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-v4-impl/10.0.1/res/raw/gtm_analytics"
+    },
+    {
         "merged": "/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/res/merged/debug/raw/loudalarm.wav",
         "source": "/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/src/main/res/raw/loudalarm.wav"
     }

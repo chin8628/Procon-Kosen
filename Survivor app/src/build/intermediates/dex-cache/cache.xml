@@ -2,157 +2,616 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/jars/classes.jar"
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/10.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
-        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.0_9dbbf17c448e546095b15d9c6e0c6b26c8e449d0/classes.dex" />
+        sha1="ba6aa5e69ef31dee57208125323cee958fc67565">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-vision-10.0.1_5053c195c8a98222b8497d349a9c3293bedf4836.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/10.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
-        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_d57a2be64e2500fdff083c9e2a7b780c88332f2b/classes.dex" />
+        sha1="de29a39f9260f88151b1ef453140e71c76b6c415">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-crash-10.0.1_fd80fd4121e62c5ba29b4c6b3c4418f39b9a7e40.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="d19c50f6d0d808a2f16040e5dc40364a4a536294">
-        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_03eeed06c30303f17264ca1f39c81be625aa250f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/jars/libs/internal_impl-24.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="6e02e34594ebe9c0501ffda8dd48497f81b82977">
-        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_ba0b5f710b65a528e4b4a13377dcb62b686f2df3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
-        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.0_3a5f8192fa0512ee5adbc25f1ea1c8a64fa05cf0/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
-        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.0_43a5be4102e26280d7a58ab68bbf543cf0936db6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/jars/libs/internal_impl-24.2.0.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
         sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
-        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_a1d6dd0e2d202b9f602e1a250807e4bd3186722e/classes.dex" />
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_a1d6dd0e2d202b9f602e1a250807e4bd3186722e.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="63fb5f00611ebe0054342a3371bbdc1b1c76f484">
-        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_87fda0a04a36f25c79674de290ce778f06b06e38/classes.dex" />
+        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-24.2.0_9dbbf17c448e546095b15d9c6e0c6b26c8e449d0.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/patcharaponjoksamut/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.0/support-annotations-24.2.0.jar"
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
-        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.0_ba00cdf97f1f98039bf6663d6f7c600fe0a2efc3/classes.dex" />
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-10.0.1_8eb91f39262849d69be757ecd84160361e3e9ca6.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="60d7b23621d31e6f42f4f76f16af467e57a20cda">
-        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_be64055974e62b24aaab296930c39d337586a857/classes.dex" />
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.android.support-mediarouter-v7-24.0.0_9ae56497f832a75ee8cd6f2673e041528f472580.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/10.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
-        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_d713314ce4976cf629937a4322214d8da8e1428f/classes.dex" />
+        sha1="8308ed003522a2ee8958311afcc4cfd0470377cd">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gcm-10.0.1_fe5a2394e9b327717141d8827f69b38e37bbea71.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/jars/classes.jar"
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
-        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.0_c830f1f89f130fcd005f9022e259f4d9c9f4f035/classes.dex" />
+        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-10.0.1_46ac718df5648fcbaf8baf80d99473417d523c8b.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
-        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.0_3e58b1f81923c90e990cb7ed5aa6901b6a16ca2f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
-        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.0_4ae3d321a61c8328fa20e9937033b8d9ece0871b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
         sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
-        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.0_dd1bc8a62a2f8cda03de8f56ada67929e6a129bc/classes.dex" />
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-24.2.0_dd1bc8a62a2f8cda03de8f56ada67929e6a129bc.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="971509bbe30bb7b971fc1c49d7b23d0d818830ac">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tagmanager-10.0.1_173d90f970b3c4b980694fca755f128e08b8a856.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="df1cb17511aabbb63264a0024949d1e42502a512">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-cast-framework-10.0.1_017ce506e96d849569dd2e32ebe90fa1382220ee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-v4-impl/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="f23ad0f8e58713ff4b55f61c0bbde3830378347c">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tagmanager-v4-impl-10.0.1_d60ce2874453fd11ab6ca64f5fdbfc5785904fc4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_d66bce1202a92a65dd6e79a721a15daf6fdccc1e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_d713314ce4976cf629937a4322214d8da8e1428f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e871881b36b32e6bfd271a830c6eeb54ff0fc185">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-analytics-impl-10.0.1_f13009ca255100f357706aaebfc24b29c9271e00.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="09cf6aa1390f95157e8295d02be7868f568825fc">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-storage-common-10.0.1_562d54f7ba552bddf1cd8c57a1c4debd9c2b2b2e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-10.0.1_952dc9a70866e95dbee3f4354515b022e5a5895a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-24.2.0_3a5f8192fa0512ee5adbc25f1ea1c8a64fa05cf0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="771267c5b0c7a5b348d3205dcfa1f871af7e0177">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-cast-10.0.1_4ed865705a6859e7204f1abe29e4ad51c374aef3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c6e1f361e9d61aece9dac39b77fcc98a337a144d">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-nearby-10.0.1_37632f72a0850db5b6525302cab9ff275255659c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="ffc15e965a9e8c28f24455eedd4cac215c45d1fc">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-config-10.0.1_fbb1925dbc7fbe4ac36450a39a78bd49f8ab2f1d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="57c2eceb8548de84509d1ebc293fedec53231f6c">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gass-10.0.1_d5de9c3dc3766cc53c86ba58f9c49a99bd089d72.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.0/support-annotations-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/support-annotations-24.2.0_ba00cdf97f1f98039bf6663d6f7c600fe0a2efc3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="7a64bf6dc775198eed9db9468a133adf7dfe6562">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-fitness-10.0.1_05e10828e2b2fc12fb87f3e1715dc956c230e6cd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="60d7b23621d31e6f42f4f76f16af467e57a20cda">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_be64055974e62b24aaab296930c39d337586a857.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="f6cf557be4dbd0282ea2388633e5378634423226">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-safetynet-10.0.1_ca90fea2baf9fa7380256bc31f22c1ca033f0b62.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="44a694d4095be84c2888764b1f7256b385c030ad">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-location-10.0.1_223dd1782c4a394f3bd6e0a3f5649b49e504076a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/palette-v7/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.android.support-palette-v7-24.0.0_09197917416271073fc1e951f20b2b0e0b581dc6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.firebase/firebase-appindexing/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="ae80d328a8548b4610ead6c624bab8c6a6984f5b">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-appindexing-10.0.1_1fc34375cf2521cfcf2869ec74e86e2eaed2c55f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="f3e51e9c5233b8897f61e08a6a27bc36283c2724">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-places-10.0.1_2ce021d435988b73415974d3ff23d62ac2f7cc85.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-impl-10.0.1_5b23f4898110df80c0bc4d4ba61e1524f991cd0b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-24.2.0_3e58b1f81923c90e990cb7ed5aa6901b6a16ca2f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.2.0_c830f1f89f130fcd005f9022e259f4d9c9f4f035.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-10.0.1_d172f9135281cae750f26e0db18463f79f79820f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-awareness/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="4385ccc0a88b33d182a836eadb47be55c8eb1107">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-awareness-10.0.1_028ee6c55da011b879b5be949aabdd742bf55568.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="39907d5c8f5902fffef30160ca7447c93b82405c">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-appinvite-10.0.1_4e7136f5d3f6745cc2e95944eee094bd6e084dd0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="408a599ac77cd17fe8e8919326bec617b3d005bd">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-wearable-10.0.1_8efb53085e1142427d6259d134eabeda9053a9cf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d0460bf07cc3657e0be518ca01c174493951c6b8">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-ads-10.0.1_62975c8ea0fed760393eb22526f5803ed5b1177a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="8010ae6ed32828a145b25ec97bc07b7a83c6318f">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-database-connection-10.0.1_8535547f6b2126185a3d0945aa3c62994adf6a56.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_d57a2be64e2500fdff083c9e2a7b780c88332f2b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-10.0.1_aa7316266939a4d79f9882a6e135aebcc9d35170.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="028f8255cb977b29cdffbfcf05caa0459686120c">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-drive-10.0.1_08f34fcde25a3afa78d2680d7e99c816da759f90.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="27777b3cad3c20b1acab19f6e37fe3e03371bf6e">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-10.0.1_86551dcdcddaa4a7077f61a63d80550cb599b1bc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e96c6974cf924e7ee3b230e6847d5731423388c9">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-base-10.0.1_9a65253184089ad59b518cabdd1dbba30c9a4107.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="dd39827d2067497e60e21da48a7926000b6d4b0c">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-storage-10.0.1_fe37c74a62ae4e68435aef135dcf5084359af5bb.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
         sha1="45f5eda279825ff470e3f51019d374d1ef61e000">
-        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.0_04f03e2beb30ed4cf31fc9cd8b035dd2ed3a85bf/classes.dex" />
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.2.0_04f03e2beb30ed4cf31fc9cd8b035dd2ed3a85bf.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="4b17463c814bdc562fb0392fa3494063623a0904">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-messaging-10.0.1_e5c14cba002fd8e34b418c6cf443c586f91c5050.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.2.0_4ae3d321a61c8328fa20e9937033b8d9ece0871b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="4c829ff0ccfecb28a999ee46d9e75948dfc777a4">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-analytics-10.0.1_86025d68db5d50c906056b0465861e6d6773b10a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="a48dc0b148059764d32500be558702d5ff932058">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-identity-10.0.1_8ecf0e37cdb25e490b7f75948c751dc632766f88.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.2.0_43a5be4102e26280d7a58ab68bbf543cf0936db6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="7140375e7c6568c40ee4642515e47b72f0ab4f50">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/instant-run_87fda0a04a36f25c79674de290ce778f06b06e38.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="8a35d3ffec768045908da1b0bd5ea943b1712ed0">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_03eeed06c30303f17264ca1f39c81be625aa250f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-instantapps/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="45305e6af414dab5aba6c3225081c2f15c3bdd1e">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-instantapps-10.0.1_233d365e05cdc0e1d98edf3f600f4b7a7f14d97b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="6e02e34594ebe9c0501ffda8dd48497f81b82977">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_ba0b5f710b65a528e4b4a13377dcb62b686f2df3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="b955cb3a1ad6f1b6ff728ce1e0cd592c1717b440">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-ads-lite-10.0.1_fa79e013b054255bac7c5a2e35ae411b2bc07da3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="6bb5d347ebc0c6ef3c83a905222a688da5d2f7b4">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-iid-10.0.1_31c3f31fdf9a09f746cb22c1e8ed43432cc7bb01.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e2185aff89caeb337b1ffc36d5e525d8318e7cfe">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-10.0.1_a955895b36334580ff63aaeca858ab100f110a63.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c14f0c89f28cf782e42581ab0aba5f63af39b3d2">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-plus-10.0.1_dce935b884b6bcec0f14ffb4c7e9c289af08e385.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-database-10.0.1_c0f511a5fec459fa11a374b33ebdc1e97ccd6ea1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="1d193729baf37df3d902a423291423a0df7e3779">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-clearcut-10.0.1_b5be916c657d0fc4c867e6e0f8f216dceb5d0602.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-auth-10.0.1_aeb5b06b5b73955a7c65fd78fba57f11f6d1c2ae.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="92c871a22463a247e8a77a9f3fd231c278788c4a">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-panorama-10.0.1_5034daa5810e564aba5e7e7a4feffd2a6f72f25f.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
         sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
-        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.0_e27bf98743d3193a6af4947d3d63a155b6a4e5f0/classes.dex" />
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-24.2.0_e27bf98743d3193a6af4947d3d63a155b6a4e5f0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="b1df8fa3d372a27e4e969ce00b00689ee1eed031">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tagmanager-api-10.0.1_0c6ab9fca037f1130e4a15cc36339d5066055057.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-10.0.1_519bec25a1bd5dba9b6cd099e5ce087ecbfc5b0a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="1e11c68fec92a17c84dd8d1dd80e74c4e67b12e2">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-games-10.0.1_f805fe1eaf095942c0cc333cd6543beac5ea93fd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="2d5d113b0352ab60946fc44c518cf68fd26cbb79">
+        <dex dex="/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-wallet-10.0.1_76439a736d4c556f07e71844b923a8c8f89f8925.jar" />
     </item>
 
 </items>

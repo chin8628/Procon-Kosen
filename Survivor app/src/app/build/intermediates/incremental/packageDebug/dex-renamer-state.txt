@@ -1,7 +1,4 @@
-#Tue Jan 24 18:47:13 ICT 2017
-base.0=/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_87fda0a04a36f25c79674de290ce778f06b06e38
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_03eeed06c30303f17264ca1f39c81be625aa250f/classes.dex
-base.1=/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_03eeed06c30303f17264ca1f39c81be625aa250f
-file.0=/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_87fda0a04a36f25c79674de290ce778f06b06e38/classes.dex
+#Sun Feb 05 18:12:38 ICT 2017
+base.0=/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/Users/patcharaponjoksamut/Workspace/IamHere/Survivor app/src/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
